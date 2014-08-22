@@ -10,6 +10,9 @@ github_username:  jekyll
 # Jekyll
 gems:
   - jekyll-slim
+exclude:
+  - Readme.md
+  - Guardfile
 
 # Slim
 slim:
