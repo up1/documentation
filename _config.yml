@@ -11,6 +11,10 @@ github_username:  jekyll
 gems:
   - jekyll-slim
 
+# Slim
+slim:
+  pretty: true
+
 # Build settings
 markdown: kramdown
 permalink: pretty
