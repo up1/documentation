@@ -1,0 +1,1392 @@
+/*
+ * ----------------------------------------
+ * Website.scss
+ * This is the styling for the Codeship Website
+ * ----------------------------------------
+ */
+/*
+** ====================================================
+** FUNCTIONS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+/*
+** ====================================================
+** MIXINS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+/* line 42, ../../src/rig/scss/_mixins.scss */
+.section--quotes .row:nth-of-type(odd) .testimonial__quote::before, .section--quotes .row:nth-of-type(even) .testimonial__quote::before, .twitterStream__tweet:nth-of-type(odd) .twitterStream__tweetContainer::before, .twitterStream__tweet:nth-of-type(even) .twitterStream__tweetContainer::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0; }
+
+/*
+** ====================================================
+** VARIABLES.SCSS
+**
+** Define various variables that can be accessed in the framework
+** ====================================================
+*/
+/*
+ * BASE | values needed as base values for many things to come at a later point
+ */
+/*
+ * BREAKPOINTS | prefixed with bp
+ */
+/*
+ * VALUES | prefixed with v | are used as default values for some actions like dark or shadows
+ */
+/*
+ * FONTS | prefixed with f
+ */
+/*
+ * ------------------------------------------------------------------------------ *
+ * Generate a variable ($all-text-inputs) with a list of all html5
+ * input types that have a text-based input, excluding textarea.
+ * ------------------------------------------------------------------------------ *
+ */
+/*
+ * MAPS | prefixed with m
+ *
+ */
+/*
+ * COLORS | prefixed with c
+ *
+ * Helpercolors get defined with _c, those shouldn't be used in real code (except color will be the same forever).
+ * Instead create a variable referencing those.
+ */
+/* line 2, ../../src/website/scss/elements/_overall.scss */
+h1 .icon, h2 .icon, h3 .icon, h4 .icon {
+  color: #588fd5; }
+
+/* line 7, ../../src/website/scss/elements/_overall.scss */
+.well__title {
+  color: white; }
+
+/* line 11, ../../src/website/scss/elements/_overall.scss */
+.specificLogos {
+  display: block;
+  padding: 1rem 0;
+  color: white; }
+  /* line 16, ../../src/website/scss/elements/_overall.scss */
+  .specificLogos img {
+    height: 4.5rem;
+    margin: 0 1rem; }
+  /* line 21, ../../src/website/scss/elements/_overall.scss */
+  .specificLogos p {
+    font-size: 1.5rem; }
+
+/* line 1, ../../src/website/scss/elements/_docs.scss */
+.docs {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+/* line 6, ../../src/website/scss/elements/_docs.scss */
+.sectionDocsTitle {
+  background-image: -webkit-linear-gradient(10deg, #41b4ef 40%, #ff82ab 90%);
+  background-image: linear-gradient(80deg, #41b4ef 40%, #ff82ab 90%);
+  color: #FFF;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0; }
+  /* line 10, ../../src/website/scss/elements/_docs.scss */
+  .sectionDocsTitle a {
+    color: #fff; }
+
+/* line 20, ../../src/website/scss/elements/_docs.scss */
+.docsTitle {
+  font-size: 3em;
+  display: inline-block; }
+
+/* line 25, ../../src/website/scss/elements/_docs.scss */
+.docsSubtitle {
+  font-size: .9em;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2em;
+  margin-left: .5em; }
+
+/* line 33, ../../src/website/scss/elements/_docs.scss */
+.docsTocButton {
+  appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 2px solid #fff;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  cursor: pointer; }
+  /* line 44, ../../src/website/scss/elements/_docs.scss */
+  .docsTocButton .icon {
+    color: white; }
+  /* line 48, ../../src/website/scss/elements/_docs.scss */
+  .docsTocButton:hover {
+    background: #fff; }
+    /* line 51, ../../src/website/scss/elements/_docs.scss */
+    .docsTocButton:hover .icon {
+      fill: #ff82ab; }
+
+/* line 57, ../../src/website/scss/elements/_docs.scss */
+.docs .pageHeader {
+  position: inherit;
+  background: #58626d;
+  height: 5em;
+  text-align: right;
+  padding-top: .8em;
+  padding-right: 160px; }
+
+/* line 67, ../../src/website/scss/elements/_docs.scss */
+#grid [class*="col"] {
+  background: #dfdfdf;
+  line-height: 2.5em;
+  border-left: 16px solid #41b4ef;
+  border-right: 16px solid #41b4ef;
+  padding: 0; }
+/* line 75, ../../src/website/scss/elements/_docs.scss */
+#grid .row {
+  margin-top: 10px; }
+/* line 79, ../../src/website/scss/elements/_docs.scss */
+#grid .row .row {
+  margin: 0; }
+
+/* line 84, ../../src/website/scss/elements/_docs.scss */
+.docsThemeSwitcher {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  background: #101b27;
+  z-index: 1000;
+  width: 150px; }
+  /* line 92, ../../src/website/scss/elements/_docs.scss */
+  .docsThemeSwitcher a {
+    display: block;
+    text-align: left;
+    line-height: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 1em; }
+    /* line 101, ../../src/website/scss/elements/_docs.scss */
+    .docsThemeSwitcher a:hover {
+      background: #588fd5; }
+
+/* line 107, ../../src/website/scss/elements/_docs.scss */
+.docsToc {
+  display: none;
+  padding-bottom: 16px; }
+
+/* line 112, ../../src/website/scss/elements/_docs.scss */
+.sectionDocs__title {
+  line-height: 3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em; }
+
+/* line 118, ../../src/website/scss/elements/_docs.scss */
+pre {
+  position: relative;
+  margin: 3em 0; }
+
+/* line 123, ../../src/website/scss/elements/_docs.scss */
+pre code {
+  display: none;
+  padding-top: 16px !important; }
+
+/* line 128, ../../src/website/scss/elements/_docs.scss */
+pre h3 {
+  cursor: pointer;
+  position: relative; }
+  /* line 132, ../../src/website/scss/elements/_docs.scss */
+  pre h3:after {
+    content: "";
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    text-align: center;
+    display: block;
+    top: 0; }
+  /* line 143, ../../src/website/scss/elements/_docs.scss */
+  pre h3:hover:after {
+    content: "Click to toggle sourcecode"; }
+
+/* line 1, ../../src/website/scss/elements/_forms.scss */
+.formContainer__col {
+  padding-bottom: 2em; }
+
+/* line 5, ../../src/website/scss/elements/_forms.scss */
+.formContainer__title {
+  font-family: "Bariol", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 2em; }
+
+/* line 13, ../../src/website/scss/elements/_forms.scss */
+.form *:first-child {
+  margin-top: 0; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * NAV
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 7, ../../src/website/scss/elements/_nav.scss */
+.nav {
+  display: inline-block; }
+  /* line 10, ../../src/website/scss/elements/_nav.scss */
+  .nav ul {
+    list-style: none;
+    margin: 0; }
+  /* line 15, ../../src/website/scss/elements/_nav.scss */
+  .nav li {
+    display: inline-block;
+    padding: 0; }
+
+/* line 22, ../../src/website/scss/elements/_nav.scss */
+.nav--small {
+  font-size: .7em; }
+
+/* line 26, ../../src/website/scss/elements/_nav.scss */
+.nav__link {
+  display: block;
+  color: black;
+  text-decoration: none;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px; }
+  /* line 35, ../../src/website/scss/elements/_nav.scss */
+  .nav__link:hover {
+    background: none;
+    color: #588fd5; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * PageHeader for the Website
+ *
+ * This Element is used only once on the Website
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 9, ../../src/website/scss/elements/_header.scss */
+.pageHeader {
+  width: 100%;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  background: #101b27;
+  position: fixed; }
+  /* line 17, ../../src/website/scss/elements/_header.scss */
+  .pageHeader .contentWrapper {
+    text-align: right;
+    padding: 8px 10rem 8px 0;
+    padding-right: 10rem;
+    position: relative; }
+  /* line 24, ../../src/website/scss/elements/_header.scss */
+  .pageHeader a {
+    color: white; }
+  /* line 28, ../../src/website/scss/elements/_header.scss */
+  .pageHeader .nav {
+    display: block; }
+  /* line 32, ../../src/website/scss/elements/_header.scss */
+  .pageHeader .nav--small .nav__link {
+    padding-bottom: 0;
+    opacity: .5; }
+    /* line 36, ../../src/website/scss/elements/_header.scss */
+    .pageHeader .nav--small .nav__link:hover {
+      opacity: 1; }
+
+/* line 42, ../../src/website/scss/elements/_header.scss */
+.pageHeader__logo {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  padding-top: .9rem;
+  padding-left: 1rem;
+  height: 2em;
+  text-align: left; }
+  /* line 51, ../../src/website/scss/elements/_header.scss */
+  .pageHeader__logo img {
+    height: 2rem; }
+  /* line 55, ../../src/website/scss/elements/_header.scss */
+  .pageHeader__logo a {
+    display: block; }
+
+/* line 60, ../../src/website/scss/elements/_header.scss */
+.pageHeader__signup {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-left: 16px;
+  height: 100%; }
+  /* line 67, ../../src/website/scss/elements/_header.scss */
+  .pageHeader__signup .btn {
+    padding: .8em 1em; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * QUOTES and TESTIMONIALS
+ *
+ * Quoteblocks contain Testimonials or similar
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 9, ../../src/website/scss/elements/_quotes.scss */
+.quote {
+  padding: 16px 48px;
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1.2em; }
+  /* line 15, ../../src/website/scss/elements/_quotes.scss */
+  .quote p {
+    font-size: 1.5rem; }
+  /* line 19, ../../src/website/scss/elements/_quotes.scss */
+  .quote::before, .quote::after {
+    font-size: 1.5rem;
+    position: absolute;
+    color: #20334d; }
+  /* line 26, ../../src/website/scss/elements/_quotes.scss */
+  .quote::before {
+    font-family: FontAwesome;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f10d";
+    left: 0;
+    top: 16px; }
+  /* line 32, ../../src/website/scss/elements/_quotes.scss */
+  .quote::after {
+    font-family: FontAwesome;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f10e";
+    right: 0;
+    bottom: 16px; }
+
+/* line 39, ../../src/website/scss/elements/_quotes.scss */
+.quote--outside {
+  padding: 16px; }
+  /* line 42, ../../src/website/scss/elements/_quotes.scss */
+  .quote--outside::before {
+    top: -32px;
+    left: 16px; }
+  /* line 47, ../../src/website/scss/elements/_quotes.scss */
+  .quote--outside::after {
+    bottom: -32px;
+    right: 16px; }
+
+/* line 53, ../../src/website/scss/elements/_quotes.scss */
+.testimonials {
+  background: white;
+  color: #7b889a;
+  padding: 64px 0;
+  position: relative; }
+  /* line 59, ../../src/website/scss/elements/_quotes.scss */
+  .testimonials a {
+    text-shadow: none;
+    background-image: none;
+    text-decoration: none; }
+
+/* line 66, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__switch {
+  margin-left: 16px;
+  position: absolute;
+  bottom: 64px;
+  left: 0;
+  z-index: 50; }
+
+/* line 73, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__prev,
+.testimonials__next {
+  font-size: 2em;
+  width: 1em; }
+
+/* line 79, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__prev {
+  float: left;
+  margin-left: -.5em; }
+
+/* line 84, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__next {
+  float: right;
+  margin-right: -.5em;
+  text-align: right; }
+
+/* line 90, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__companies {
+  position: absolute;
+  padding-left: 4.5em;
+  bottom: 80px;
+  right: 0;
+  color: #20334d; }
+  /* line 97, ../../src/website/scss/elements/_quotes.scss */
+  .testimonials__companies a {
+    margin-right: 1em;
+    opacity: .5; }
+    /* line 101, ../../src/website/scss/elements/_quotes.scss */
+    .testimonials__companies a.is-active {
+      opacity: 1;
+      color: #588fd5; }
+
+/* line 108, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__switch,
+.testimonials__companies {
+  margin-top: -2em; }
+
+/* line 113, ../../src/website/scss/elements/_quotes.scss */
+.testimonials__list {
+  margin: 0; }
+
+/* line 117, ../../src/website/scss/elements/_quotes.scss */
+.testimonial {
+  display: block;
+  font-size: 0;
+  position: relative; }
+
+/* line 125, ../../src/website/scss/elements/_quotes.scss */
+.testimonial--dialoge .testimonial__quote {
+  position: relative;
+  padding: 1em 2em;
+  background: white;
+  border-radius: 0.4rem;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2); }
+  /* line 133, ../../src/website/scss/elements/_quotes.scss */
+  .testimonial--dialoge .testimonial__quote:before {
+    top: 2em; }
+
+/* line 140, ../../src/website/scss/elements/_quotes.scss */
+.section--quotes .row:nth-of-type(odd) .testimonial__quote::before {
+  border: 1rem solid transparent;
+  border-left: 1rem solid white;
+  right: -2rem; }
+/* line 145, ../../src/website/scss/elements/_quotes.scss */
+.section--quotes .row:nth-of-type(even) .testimonial__quote::before {
+  border: 1rem solid transparent;
+  border-right: 1rem solid white;
+  left: -2rem; }
+
+/* line 151, ../../src/website/scss/elements/_quotes.scss */
+.testimonial__quote {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 1.2rem;
+  fill: #fff; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * PARALLAX
+ *
+ * Some Pages have some special Parallax Elements, those get styled here
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 9, ../../src/website/scss/elements/_sections.scss */
+.parallax {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+/* line 16, ../../src/website/scss/elements/_sections.scss */
+.parallax--small {
+  height: 75%; }
+
+/* line 20, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #101b27; }
+  /* line 26, ../../src/website/scss/elements/_sections.scss */
+  .parallaxImg:before {
+    position: absolute;
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: .6; }
+
+/* line 37, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--landingpage:before {
+  background-image: url(../img/parallax/home.jpg); }
+
+/* line 41, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--signin:before {
+  background-image: url(../img/parallax/signup.jpg); }
+
+/* line 45, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--pricing:before {
+  background-image: url(../img/parallax/pricing.jpg); }
+
+/* line 49, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--jobs:before {
+  background-image: url(../img/parallax/about.jpg); }
+
+/* line 53, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--team:before {
+  background-image: url(../img/parallax/about.jpg); }
+
+/* line 57, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--customers:before {
+  background-image: url(../img/parallax/coffee.jpg); }
+
+/* line 61, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--content:before {
+  background-image: url(../img/parallax/coffee.jpg); }
+
+/* line 65, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--specific:before {
+  background-image: url(../img/parallax/specific.jpg); }
+
+/* line 69, ../../src/website/scss/elements/_sections.scss */
+.parallaxImg--landingpageFocus {
+  top: 160%; }
+  /* line 71, ../../src/website/scss/elements/_sections.scss */
+  .parallaxImg--landingpageFocus:before {
+    background-image: url(../img/parallax/focus.jpg); }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SECTIONS
+ *
+ * Cover Special Sections on the Website
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 84, ../../src/website/scss/elements/_sections.scss */
+.section {
+  padding: 2rem 0;
+  font-size: 0;
+  background: white;
+  position: relative; }
+
+/* line 91, ../../src/website/scss/elements/_sections.scss */
+.section--flat, .section--twitter {
+  padding: 0; }
+
+/* line 95, ../../src/website/scss/elements/_sections.scss */
+.section--fat {
+  padding: 6rem 0; }
+
+/* line 99, ../../src/website/scss/elements/_sections.scss */
+.section--sticker {
+  padding-top: 0; }
+
+/* line 103, ../../src/website/scss/elements/_sections.scss */
+.section--gray {
+  background: #f3f6fb; }
+
+/* line 107, ../../src/website/scss/elements/_sections.scss */
+.section--blue {
+  background: #eef9ff; }
+
+/* line 111, ../../src/website/scss/elements/_sections.scss */
+.section--header {
+  height: 100%;
+  padding: 0;
+  background: transparent; }
+
+/* line 117, ../../src/website/scss/elements/_sections.scss */
+.section--smallHeader {
+  height: 75%;
+  padding: 0;
+  background: transparent; }
+
+/* line 123, ../../src/website/scss/elements/_sections.scss */
+.section--teaser {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  padding: 1rem 0;
+  background: transparent;
+  font-size: 2rem;
+  color: white;
+  opacity: .2; }
+  /* line 131, ../../src/website/scss/elements/_sections.scss */
+  .section--teaser .icon {
+    -webkit-animation: teaser 4s infinite;
+    animation: teaser 4s infinite; }
+
+/* line 136, ../../src/website/scss/elements/_sections.scss */
+.section--full {
+  height: 100%; }
+  /* line 139, ../../src/website/scss/elements/_sections.scss */
+  .section--full:nth-of-type(even) {
+    background: white; }
+  /* line 143, ../../src/website/scss/elements/_sections.scss */
+  .section--full:nth-of-type(odd) {
+    background: #f3f6fb; }
+
+/* line 148, ../../src/website/scss/elements/_sections.scss */
+.section--focusOnCode {
+  height: 70%;
+  background: transparent; }
+  /* line 152, ../../src/website/scss/elements/_sections.scss */
+  .section--focusOnCode .well {
+    color: #fff; }
+
+/* line 157, ../../src/website/scss/elements/_sections.scss */
+.section--weGotLove {
+  padding: 0;
+  height: 6rem;
+  line-height: 7rem; }
+  /* line 162, ../../src/website/scss/elements/_sections.scss */
+  .section--weGotLove .icon {
+    color: white;
+    font-size: 2rem;
+    text-stroke: 1px #588fd5;
+    text-shadow: -1px -1px 0 #588fd5, 1px -1px 0 #588fd5, -1px 1px 0 #588fd5, 1px 1px 0 #588fd5; }
+    /* line 172, ../../src/website/scss/elements/_sections.scss */
+    .section--weGotLove .icon:hover {
+      color: #588fd5;
+      cursor: progress;
+      -webkit-animation: heartBeat 1.5s infinite;
+      animation: heartBeat 1.5s infinite; }
+
+/* line 180, ../../src/website/scss/elements/_sections.scss */
+.section--quotes {
+  background: #5991d9;
+  padding: 4rem 0 6rem 0; }
+  /* line 184, ../../src/website/scss/elements/_sections.scss */
+  .section--quotes .well {
+    color: white;
+    padding-bottom: 2em; }
+  /* line 189, ../../src/website/scss/elements/_sections.scss */
+  .section--quotes .row {
+    padding-bottom: 1rem; }
+    /* line 192, ../../src/website/scss/elements/_sections.scss */
+    .section--quotes .row:last-of-type {
+      padding-bottom: 0; }
+  /* line 197, ../../src/website/scss/elements/_sections.scss */
+  .section--quotes figcaption {
+    color: white; }
+
+/* line 202, ../../src/website/scss/elements/_sections.scss */
+.section--customers {
+  background: #f3f6fb; }
+
+/* line 207, ../../src/website/scss/elements/_sections.scss */
+.section--faq h2 {
+  margin: 2em 0 1.5em 0; }
+
+/* line 214, ../../src/website/scss/elements/_sections.scss */
+.section--job:nth-of-type(even) {
+  background: #f3f6fb; }
+/* line 218, ../../src/website/scss/elements/_sections.scss */
+.section--job:nth-of-type(odd) {
+  background: white; }
+
+/* line 223, ../../src/website/scss/elements/_sections.scss */
+.section--twitter {
+  background: #5991d9; }
+
+/* line 228, ../../src/website/scss/elements/_sections.scss */
+.section--twitter__bird {
+  padding: 1.5em 0;
+  background: white;
+  color: #588fd5;
+  font-size: 2rem; }
+
+/* line 235, ../../src/website/scss/elements/_sections.scss */
+.section--whoIsUsingIt {
+  padding: 0;
+  height: 10rem;
+  padding-top: 3rem;
+  position: relative;
+  overflow: hidden; }
+  /* line 242, ../../src/website/scss/elements/_sections.scss */
+  .section--whoIsUsingIt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20rem;
+    height: 20rem;
+    border-top-left-radius: 200%;
+    border-top-right-radius: 200%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #fdfdfe; }
+  /* line 256, ../../src/website/scss/elements/_sections.scss */
+  .section--whoIsUsingIt h2 {
+    position: absolute;
+    width: 100%;
+    z-index: 1; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SPECIAL STICKER ELEMENTS
+ *
+ * Some Sections have some special Elements
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 271, ../../src/website/scss/elements/_sections.scss */
+.is-spacer {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+/* line 276, ../../src/website/scss/elements/_sections.scss */
+.section__sticker {
+  position: relative;
+  height: 7rem; }
+  /* line 280, ../../src/website/scss/elements/_sections.scss */
+  .section__sticker .sticker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-left: -4px; }
+
+/* line 1, ../../src/website/scss/elements/_footer.scss */
+.pageFooter {
+  background: #101b27;
+  color: white;
+  font-size: .8em;
+  padding: 1em 0; }
+  /* line 8, ../../src/website/scss/elements/_footer.scss */
+  .pageFooter .nav a {
+    color: white;
+    font-size: .7em; }
+
+/* line 15, ../../src/website/scss/elements/_footer.scss */
+.copyright img {
+  height: 2.5rem; }
+/* line 19, ../../src/website/scss/elements/_footer.scss */
+.copyright p, .copyright a {
+  font-size: .9em; }
+/* line 23, ../../src/website/scss/elements/_footer.scss */
+.copyright a {
+  text-shadow: none;
+  margin-right: 1em; }
+
+/* line 1, ../../src/website/scss/elements/_price.scss */
+.price {
+  vertical-align: bottom; }
+
+/* line 5, ../../src/website/scss/elements/_price.scss */
+.price__head {
+  background: #3b4654;
+  color: white;
+  border-radius: 0.4rem 0.4rem 0 0;
+  padding: 2rem 1.5rem;
+  position: relative; }
+
+/* line 13, ../../src/website/scss/elements/_price.scss */
+.price__plan {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.7em; }
+
+/* line 20, ../../src/website/scss/elements/_price.scss */
+.price__cost {
+  position: absolute;
+  background: #5d96e1;
+  top: 2rem;
+  right: 1rem;
+  line-height: 2.5em;
+  width: 4.5rem;
+  text-align: center;
+  border-radius: 0.4rem; }
+  /* line 30, ../../src/website/scss/elements/_price.scss */
+  .price__cost:after {
+    position: absolute;
+    content: "*";
+    color: #327ad9;
+    font-size: 2em;
+    line-height: 0;
+    top: .7em; }
+
+/* line 40, ../../src/website/scss/elements/_price.scss */
+.price__popular {
+  background: #5d96e1;
+  text-align: center;
+  color: white; }
+
+/* line 46, ../../src/website/scss/elements/_price.scss */
+.price__body {
+  background: white;
+  color: #6d7c8f;
+  border-radius: 0 0 0.4rem 0.4rem;
+  padding: 2rem 1.5rem;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1); }
+
+/* line 54, ../../src/website/scss/elements/_price.scss */
+.price__build {
+  text-align: center;
+  border: 1px solid #6d7c8f;
+  border-radius: 0.4rem;
+  line-height: 2.5em; }
+
+/* line 63, ../../src/website/scss/elements/_price.scss */
+.price__list li {
+  padding: 0;
+  line-height: 3em;
+  position: relative; }
+  /* line 68, ../../src/website/scss/elements/_price.scss */
+  .price__list li:first-of-type:before {
+    content: none; }
+  /* line 72, ../../src/website/scss/elements/_price.scss */
+  .price__list li:before {
+    content: "";
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 15%; }
+
+/* line 83, ../../src/website/scss/elements/_price.scss */
+.price__new:after {
+  content: "NEW";
+  background: #5d96e1;
+  border-radius: 0.4rem;
+  position: absolute;
+  right: 0;
+  line-height: 1.6em;
+  padding: 0 .4em;
+  margin-top: 1.1em;
+  color: white;
+  font-size: .8rem; }
+
+/* line 96, ../../src/website/scss/elements/_price.scss */
+.has-pricelistMargin {
+  margin-bottom: 3em; }
+
+/* line 1, ../../src/website/scss/elements/_faq.scss */
+.faq {
+  font-size: 0; }
+
+/* line 5, ../../src/website/scss/elements/_faq.scss */
+.faq__item {
+  display: inline-block;
+  width: 50%;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px; }
+  /* line 12, ../../src/website/scss/elements/_faq.scss */
+  .faq__item h3 {
+    font-size: 1.3em; }
+    /* line 15, ../../src/website/scss/elements/_faq.scss */
+    .faq__item h3:before {
+      font-family: FontAwesome;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f128";
+      background: #588fd5;
+      color: white;
+      width: 1em;
+      height: 1em;
+      font-size: .8em;
+      display: inline-block;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 1em; }
+
+/* line 1, ../../src/website/scss/elements/_jobs.scss */
+.jobsListItem .icon, .job__title i {
+  height: 3rem;
+  width: 3rem;
+  background: #54bf5d;
+  color: white;
+  line-height: 3rem;
+  text-align: center;
+  position: absolute;
+  left: .5rem;
+  top: .5rem; }
+
+/* line 13, ../../src/website/scss/elements/_jobs.scss */
+.jobsListItem {
+  background: white;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  height: 4rem;
+  padding: 0 6rem 0 4.5rem;
+  position: relative;
+  margin-bottom: .6rem; }
+
+/* line 27, ../../src/website/scss/elements/_jobs.scss */
+.jobsListItem__job {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0;
+  padding-top: 1em; }
+
+/* line 34, ../../src/website/scss/elements/_jobs.scss */
+.jobsListItem__location {
+  font-size: .8em;
+  color: #c1c1c1;
+  margin: 0; }
+  /* line 39, ../../src/website/scss/elements/_jobs.scss */
+  .jobsListItem__location:before {
+    font-family: FontAwesome;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f041";
+    margin-right: .7em; }
+
+/* line 45, ../../src/website/scss/elements/_jobs.scss */
+.jobsListItem__details {
+  position: absolute;
+  right: 0;
+  height: 4rem;
+  line-height: 4rem;
+  top: 0;
+  text-transform: uppercase;
+  font-size: .8em; }
+  /* line 54, ../../src/website/scss/elements/_jobs.scss */
+  .jobsListItem__details:after {
+    font-family: FontAwesome;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f054";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: .8em;
+    border: 1px solid #588fd5;
+    border-radius: 50%;
+    margin: 0 2em 0 1em;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: .2em; }
+
+/* line 71, ../../src/website/scss/elements/_jobs.scss */
+.job__title {
+  font-size: 2rem;
+  line-height: 3rem;
+  padding-left: 4rem; }
+  /* line 76, ../../src/website/scss/elements/_jobs.scss */
+  .job__title i {
+    font-size: .9rem;
+    left: 1rem; }
+
+/* line 1, ../../src/website/scss/elements/_bloxs.scss */
+.blox {
+  position: relative;
+  clip: 100%;
+  padding: 0;
+  border: 8px solid white;
+  background: #101b27;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box; }
+
+/* line 12, ../../src/website/scss/elements/_bloxs.scss */
+.blox--photo figure {
+  overflow: hidden; }
+/* line 16, ../../src/website/scss/elements/_bloxs.scss */
+.blox--photo img {
+  float: left;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: -webkit-transform 1500ms, -webkit-filter 300ms;
+  transition: transform 1500ms, filter 300ms; }
+  /* line 21, ../../src/website/scss/elements/_bloxs.scss */
+  .blox--photo img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2) translateY(-5%);
+    -ms-transform: scale(1.2) translateY(-5%);
+    transform: scale(1.2) translateY(-5%);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); }
+
+/* line 29, ../../src/website/scss/elements/_bloxs.scss */
+.blox--team {
+  margin-bottom: 5rem; }
+  /* line 34, ../../src/website/scss/elements/_bloxs.scss */
+  .blox--team figure {
+    height: 100%;
+    overflow: hidden; }
+    /* line 38, ../../src/website/scss/elements/_bloxs.scss */
+    .blox--team figure::before, .blox--team figure::after {
+      -webkit-transition: -webkit-transform 200ms;
+      transition: transform 200ms; }
+    /* line 43, ../../src/website/scss/elements/_bloxs.scss */
+    .blox--team figure::before {
+      content: "";
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      border-right: 1px solid #fff;
+      border-left: 1px solid #fff;
+      pointer-events: none;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      transform: scale(1, 0); }
+    /* line 56, ../../src/website/scss/elements/_bloxs.scss */
+    .blox--team figure::after {
+      content: "";
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      pointer-events: none;
+      -webkit-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+      transform: scale(0, 1); }
+    /* line 70, ../../src/website/scss/elements/_bloxs.scss */
+    .blox--team figure:hover::before, .blox--team figure:hover::after {
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1); }
+  /* line 78, ../../src/website/scss/elements/_bloxs.scss */
+  .blox--team img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .7;
+    height: 100%;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: -webkit-transform 1500ms, -webkit-filter 300ms;
+    transition: transform 1500ms, filter 300ms; }
+    /* line 85, ../../src/website/scss/elements/_bloxs.scss */
+    .blox--team img:hover {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); }
+
+/* line 92, ../../src/website/scss/elements/_bloxs.scss */
+.blox__socials {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  /* line 97, ../../src/website/scss/elements/_bloxs.scss */
+  .blox__socials span {
+    height: 3rem;
+    width: 3rem;
+    background: #588fd5;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: .5rem;
+    display: block; }
+    /* line 107, ../../src/website/scss/elements/_bloxs.scss */
+    .blox__socials span a {
+      color: white; }
+
+/* line 111, ../../src/website/scss/elements/_bloxs.scss */
+.blox__caption {
+  background: white;
+  line-height: 1rem;
+  height: 4rem;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%); }
+  /* line 122, ../../src/website/scss/elements/_bloxs.scss */
+  .blox__caption span {
+    display: block;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.5); }
+
+/* line 130, ../../src/website/scss/elements/_bloxs.scss */
+.blox--blog p {
+  font-size: 1.4em;
+  color: white;
+  margin: 0;
+  padding: 15%; }
+
+/* line 138, ../../src/website/scss/elements/_bloxs.scss */
+.blox--twitterSlide {
+  background: #5990d8; }
+  /* line 141, ../../src/website/scss/elements/_bloxs.scss */
+  .blox--twitterSlide p {
+    font-size: 1.4em;
+    color: white;
+    padding: 16px; }
+  /* line 147, ../../src/website/scss/elements/_bloxs.scss */
+  .blox--twitterSlide a {
+    text-shadow: none;
+    color: black; }
+
+/* line 153, ../../src/website/scss/elements/_bloxs.scss */
+.blox__sliderCounter {
+  position: absolute;
+  left: 8px;
+  bottom: 16px;
+  padding-left: 5%; }
+  /* line 159, ../../src/website/scss/elements/_bloxs.scss */
+  .blox__sliderCounter a {
+    display: inline-block;
+    height: .7rem;
+    width: .7rem;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 8px; }
+    /* line 168, ../../src/website/scss/elements/_bloxs.scss */
+    .blox__sliderCounter a.is-active {
+      background: white;
+      border-color: white; }
+
+/* line 175, ../../src/website/scss/elements/_bloxs.scss */
+.blox__camera,
+.blox__blog {
+  position: absolute; }
+
+/* line 180, ../../src/website/scss/elements/_bloxs.scss */
+.blox__camera {
+  height: 3rem;
+  width: 3rem;
+  background: rgba(88, 143, 213, 0.8);
+  line-height: 3rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  right: 0;
+  bottom: 0; }
+
+/* line 192, ../../src/website/scss/elements/_bloxs.scss */
+.blox__blog {
+  color: white;
+  font-size: 1.2em;
+  right: 8px;
+  bottom: 8px; }
+  /* line 198, ../../src/website/scss/elements/_bloxs.scss */
+  .blox__blog span {
+    color: #588fd5; }
+  /* line 202, ../../src/website/scss/elements/_bloxs.scss */
+  .blox__blog i {
+    margin-left: 8px; }
+
+/* line 1, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock {
+  background: white;
+  color: #717d8b;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 4px 0 0 #cedbed;
+  box-shadow: 0 4px 0 0 #cedbed;
+  padding: 1rem;
+  margin-bottom: 2rem; }
+
+/* line 10, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__info {
+  padding: 0 1rem; }
+  /* line 12, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__info:after {
+    content: "";
+    position: absolute;
+    background: #e5edf7;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  /* line 24, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__info header {
+    line-height: 3rem;
+    padding: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  /* line 31, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__info img {
+    height: 3rem;
+    vertical-align: middle; }
+
+/* line 37, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__infoText {
+  margin: 2rem 0;
+  font-size: 1.3em; }
+  /* line 41, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__infoText strong {
+    color: #5a646f; }
+
+/* line 46, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__stats {
+  padding: 0;
+  margin-top: 4rem; }
+
+/* line 51, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__stat {
+  padding: 0;
+  line-height: 2rem; }
+  /* line 55, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__stat i {
+    width: 2rem; }
+
+/* line 60, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__btn {
+  position: absolute;
+  right: 0;
+  bottom: 8px; }
+
+/* line 66, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__quote {
+  padding: 1rem;
+  background: #e5edf7; }
+  /* line 71, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__quote header {
+    height: 6rem;
+    text-align: right; }
+  /* line 76, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__quote figure {
+    height: 4.5rem;
+    float: right; }
+  /* line 81, ../../src/website/scss/elements/_customerblock.scss */
+  .customerblock__quote .quote {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.5em; }
+
+/* line 90, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__name {
+  display: block;
+  line-height: 1.5rem;
+  padding-top: 2rem;
+  color: #5a646f;
+  font-weight: 900; }
+
+/* line 98, ../../src/website/scss/elements/_customerblock.scss */
+.customerblock__position {
+  display: block;
+  font-size: .9rem; }
+
+/* line 1, ../../src/website/scss/elements/_tweets.scss */
+.twitterStream {
+  position: relative;
+  padding: 4rem 0; }
+  /* line 6, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream > h2 {
+    color: white;
+    margin-bottom: 2em; }
+  /* line 11, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5rem;
+    bottom: 4rem;
+    left: 50%;
+    background-image: -webkit-linear-gradient(270deg, white 20%, #5991d9 90%);
+    background-image: linear-gradient(180deg, white 20%, #5991d9 90%);
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px); }
+
+/* line 24, ../../src/website/scss/elements/_tweets.scss */
+.twitterStream__tweet {
+  width: 50%;
+  position: relative; }
+  /* line 28, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet iframe {
+    margin: 0 !important;
+    width: 100% !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important; }
+
+/* line 38, ../../src/website/scss/elements/_tweets.scss */
+.twitterStream__tweetContainer {
+  width: 90%;
+  border: 1px solid white;
+  padding: 1.5rem .5rem;
+  background: white;
+  border-radius: 0.4rem;
+  position: relative; }
+
+/* line 47, ../../src/website/scss/elements/_tweets.scss */
+.twitterStream__tweet:nth-of-type(odd) {
+  border-right: 5px solid white; }
+  /* line 50, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(odd)::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5rem;
+    background: #5991d9;
+    right: -5px; }
+  /* line 59, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(odd)::after {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    background: transparent;
+    top: 1.8rem;
+    right: -1rem; }
+  /* line 72, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(odd) .twitterStream__tweetContainer::before {
+    border: 1rem solid transparent;
+    border-left: 1rem solid white;
+    right: -2rem; }
+
+/* line 78, ../../src/website/scss/elements/_tweets.scss */
+.twitterStream__tweet:nth-of-type(even) {
+  margin-left: 50%;
+  border-left: 5px solid white;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+  text-align: right; }
+  /* line 84, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(even)::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5rem;
+    background: #5991d9;
+    left: -5px; }
+  /* line 93, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(even)::after {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    background: transparent;
+    top: 1.8rem;
+    left: -1rem; }
+  /* line 106, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(even) .twitterStream__tweetContainer {
+    margin-left: 10%; }
+  /* line 110, ../../src/website/scss/elements/_tweets.scss */
+  .twitterStream__tweet:nth-of-type(even) .twitterStream__tweetContainer::before {
+    border: 1rem solid transparent;
+    border-right: 1rem solid white;
+    left: -2rem; }

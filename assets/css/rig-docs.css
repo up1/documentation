@@ -1,0 +1,150 @@
+/* line 1, ../../src/rig/scss/rig-docs.scss */
+#grid [class*="col"] {
+  background: #dfdfdf;
+  line-height: 2.5em;
+  border-left: 1rem solid #afafaf;
+  border-right: 1rem solid #afafaf;
+  padding: 0; }
+
+/* line 8, ../../src/rig/scss/rig-docs.scss */
+#grid .row {
+  margin-top: 10px; }
+
+/* line 11, ../../src/rig/scss/rig-docs.scss */
+#grid .row .row {
+  margin: 0; }
+
+/* line 14, ../../src/rig/scss/rig-docs.scss */
+#rig {
+  height: 80%;
+  background: url(../img/rig/title.jpeg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  position: relative; }
+
+/* line 22, ../../src/rig/scss/rig-docs.scss */
+#rig h1 {
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border: 5px solid #fff;
+  margin: 0;
+  display: inline-block;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+/* line 37, ../../src/rig/scss/rig-docs.scss */
+#rig h2 {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translate(0, 2em);
+  transform: translate(0, 2em);
+  -webkit-transform: translate(0, 2em);
+  color: #fff;
+  font-weight: 400; }
+
+/* line 48, ../../src/rig/scss/rig-docs.scss */
+#rig h2 a {
+  color: #fff;
+  text-decoration: underline; }
+
+/* line 53, ../../src/rig/scss/rig-docs.scss */
+pre {
+  position: relative;
+  margin: 3em 0; }
+
+/* line 58, ../../src/rig/scss/rig-docs.scss */
+pre code {
+  display: none;
+  padding-top: 1rem !important; }
+
+/* line 63, ../../src/rig/scss/rig-docs.scss */
+pre h3 {
+  cursor: pointer;
+  position: relative; }
+  /* line 67, ../../src/rig/scss/rig-docs.scss */
+  pre h3:after {
+    content: "";
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    text-align: center;
+    display: block;
+    top: 0; }
+  /* line 78, ../../src/rig/scss/rig-docs.scss */
+  pre h3:hover:after {
+    content: "Click to toggle sourcecode"; }
+
+/* line 81, ../../src/rig/scss/rig-docs.scss */
+.rig-docs {
+  counter-reset: rig-section-counter; }
+
+/* line 85, ../../src/rig/scss/rig-docs.scss */
+.rig-docs-section {
+  border-top: 1px solid #DFDFDF;
+  margin-top: 4em;
+  padding-top: 3em;
+  position: relative; }
+  /* line 91, ../../src/rig/scss/rig-docs.scss */
+  .rig-docs-section::before {
+    counter-increment: rig-section-counter;
+    content: counter(rig-section-counter,upper-roman);
+    color: #cfcfcf;
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    top: 0;
+    left: 50%;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+    line-height: 3rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+/* line 109, ../../src/rig/scss/rig-docs.scss */
+.rig-docs-div {
+  background: #efefef;
+  padding: .7rem; }
+  /* line 113, ../../src/rig/scss/rig-docs.scss */
+  .rig-docs-div .icon {
+    width: 2rem; }
+
+/* line 118, ../../src/rig/scss/rig-docs.scss */
+.rig-docs-toc-button {
+  background: none;
+  border: 2px solid #000;
+  height: 3em;
+  width: 3em;
+  position: fixed;
+  right: 2em;
+  top: 2em;
+  cursor: pointer;
+  z-index: 100; }
+  /* line 129, ../../src/rig/scss/rig-docs.scss */
+  .rig-docs-toc-button .icon {
+    color: black; }
+  /* line 133, ../../src/rig/scss/rig-docs.scss */
+  .rig-docs-toc-button:hover {
+    background: #000; }
+    /* line 136, ../../src/rig/scss/rig-docs.scss */
+    .rig-docs-toc-button:hover .icon {
+      color: #fff; }
+
+/* line 142, ../../src/rig/scss/rig-docs.scss */
+.rig-docs-toc {
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 90; }
