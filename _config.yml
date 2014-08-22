@@ -7,6 +7,14 @@ url: "http://yourdomain.com"
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Jekyll
+gems:
+  - jekyll-slim
+
+# Slim
+slim:
+  pretty: true
+
 # Build settings
 markdown: kramdown
 permalink: pretty

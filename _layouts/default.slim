@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title
+      | {{ page.title }}
+  body
+    .site
+      .header
+        h1.title
+          a href="/"
+          | {{ site.name }}
+        a.extra href="/" home
+      | {{ content }}
+      .footer
+        .contact
+          p Your Name
