@@ -1,16 +1,24 @@
 doctype html
-html
-  head
-    title
-      | {{ page.title }}
+html lang="en"
+
+  | {% include head.slim %}
+
   body
-    .site
-      .header
-        h1.title
-          a href="/"
-          | {{ site.name }}
-        a.extra href="/" home
-      | {{ content }}
-      .footer
-        .contact
-          p Your Name
+
+    | {% include header.slim %}
+
+    section.parallax.parallax--small
+      .parallaxImg.parallaxImg--content
+
+    section.section.section--smallHeader
+      .grid.grid--verticalize.grid--cling
+        .col100
+          div.well
+            h2.well__title
+              | {{ page.title }}
+
+    section.section
+      .contentWrapper: .grid
+        | {{ content }}
+
+    | {% include footer.slim %}

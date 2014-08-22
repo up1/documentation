@@ -1,0 +1,2084 @@
+/*
+** ====================================================
+**
+** RIG.scss
+** RIG is a Basic CSS Framework made for Codeship.
+**
+** ....................................................
+**
+** @author: Roman Kuba
+** @mail: roman@codeship.io
+**
+** ....................................................
+**
+**  RRRRR    II   GGGGG
+**  RR  RR   II  GG   GG
+**  RRRRR    II  GG
+**  RR RR    II  GG  GGG
+**  RR  RR   II  GG   GG
+**  RR   RR  II   GGGGG
+**
+** ==================================================== *
+*/
+/*
+** ====================================================
+** FUNCTIONS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+/*
+** ====================================================
+** MIXINS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+/*
+** ====================================================
+** FONTS.SCSS
+**
+** Provide some fonts for the Framework through Fontface
+** ====================================================
+*/
+@font-face {
+  font-family: 'Bariol';
+  src: url("../fonts/bariol_regular-webfont.eot");
+  src: url("../fonts/bariol_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bariol_regular-webfont.woff") format("woff"), url("../fonts/bariol_regular-webfont.ttf") format("truetype"), url("../fonts/bariol_regular-webfont.svg#bariol-regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Bariol';
+  src: url("../fonts/bariol_regular_italic-webfont.eot");
+  src: url("../fonts/bariol_regular_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bariol_regular_italic-webfont.woff") format("woff"), url("../fonts/bariol_regular_italic-webfont.ttf") format("truetype"), url("../fonts/bariol_regular_italic-webfont.svg#bariol-regular-italic") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Bariol';
+  src: url("../fonts/bariol_bold-webfont.eot");
+  src: url("../fonts/bariol_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bariol_bold-webfont.woff") format("woff"), url("../fonts/bariol_bold-webfont.ttf") format("truetype"), url("../fonts/bariol_bold-webfont.svg#bariol-bold") format("svg");
+  font-weight: 700; }
+/*
+** ====================================================
+** VARIABLES.SCSS
+**
+** Define various variables that can be accessed in the framework
+** ====================================================
+*/
+/*
+ * BASE | values needed as base values for many things to come at a later point
+ */
+/*
+ * BREAKPOINTS | prefixed with bp
+ */
+/*
+ * VALUES | prefixed with v | are used as default values for some actions like dark or shadows
+ */
+/*
+ * FONTS | prefixed with f
+ */
+/*
+ * ------------------------------------------------------------------------------ *
+ * Generate a variable ($all-text-inputs) with a list of all html5
+ * input types that have a text-based input, excluding textarea.
+ * ------------------------------------------------------------------------------ *
+ */
+/*
+ * MAPS | prefixed with m
+ *
+ */
+/*
+ * COLORS | prefixed with c
+ *
+ * Helpercolors get defined with _c, those shouldn't be used in real code (except color will be the same forever).
+ * Instead create a variable referencing those.
+ */
+/*
+** ====================================================
+** ANIMATIONS.SCSS
+**
+** Features some CSS Animations.
+** ====================================================
+*/
+@-webkit-keyframes heartBeat {
+  /* line 11, ../../src/rig/scss/_animations.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 14, ../../src/rig/scss/_animations.scss */
+  35% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+  /* line 17, ../../src/rig/scss/_animations.scss */
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 20, ../../src/rig/scss/_animations.scss */
+  65% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+  /* line 23, ../../src/rig/scss/_animations.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+@keyframes heartBeat {
+  /* line 11, ../../src/rig/scss/_animations.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 14, ../../src/rig/scss/_animations.scss */
+  35% {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+  /* line 17, ../../src/rig/scss/_animations.scss */
+  50% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 20, ../../src/rig/scss/_animations.scss */
+  65% {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+  /* line 23, ../../src/rig/scss/_animations.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+@-webkit-keyframes teaser {
+  /* line 29, ../../src/rig/scss/_animations.scss */
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+
+  /* line 32, ../../src/rig/scss/_animations.scss */
+  40% {
+    -webkit-transform: translateY(0.5em);
+    transform: translateY(0.5em); }
+
+  /* line 35, ../../src/rig/scss/_animations.scss */
+  60% {
+    -webkit-transform: translateY(0.5em);
+    transform: translateY(0.5em); }
+
+  /* line 38, ../../src/rig/scss/_animations.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes teaser {
+  /* line 29, ../../src/rig/scss/_animations.scss */
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+
+  /* line 32, ../../src/rig/scss/_animations.scss */
+  40% {
+    -webkit-transform: translateY(0.5em);
+    -ms-transform: translateY(0.5em);
+    transform: translateY(0.5em); }
+
+  /* line 35, ../../src/rig/scss/_animations.scss */
+  60% {
+    -webkit-transform: translateY(0.5em);
+    -ms-transform: translateY(0.5em);
+    transform: translateY(0.5em); }
+
+  /* line 38, ../../src/rig/scss/_animations.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
+/*
+** ====================================================
+** GLOBAL.SCSS
+**
+** Basic Definitions for HTML Elements throught out Framework
+** ====================================================
+*/
+/*
+ * ------------------------------------------------------------------------------ *
+ * GENERAL
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 15, ../../src/rig/scss/_global.scss */
+html, body {
+  padding: 0;
+  margin: 0; }
+
+/* line 20, ../../src/rig/scss/_global.scss */
+html {
+  height: 100%;
+  min-height: 100%;
+  padding: 0 !important; }
+
+/* line 26, ../../src/rig/scss/_global.scss */
+body {
+  font-family: "Bariol", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-stroke: 0px;
+  -moz-text-stroke: 0px;
+  -webkit-text-stroke: 0px;
+  text-align: center;
+  height: 100%;
+  min-height: 100%;
+  color: #7b889a;
+  background: white; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Typography
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 50, ../../src/rig/scss/_global.scss */
+h1, h2, h3, h4, h5, h6,
+.like-h1, .like-h2, .like-h3, .like-h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin: .2em 0;
+  color: #101b28; }
+
+/* line 59, ../../src/rig/scss/_global.scss */
+h1, .like-h1 {
+  font-size: 3rem; }
+
+/* line 63, ../../src/rig/scss/_global.scss */
+h2, .like-h2 {
+  font-size: 2.5rem; }
+
+/* line 67, ../../src/rig/scss/_global.scss */
+h3, .like-h3 {
+  font-size: 2rem; }
+
+/* line 71, ../../src/rig/scss/_global.scss */
+h4, .like-h4 {
+  font-size: 1.6rem; }
+
+/* line 75, ../../src/rig/scss/_global.scss */
+a {
+  color: #588fd5;
+  cursor: pointer;
+  -webkit-transition: color 100ms, background-image 100ms;
+  transition: color 100ms, background-image 100ms;
+  text-decoration: none; }
+  /* line 81, ../../src/rig/scss/_global.scss */
+  a:hover {
+    color: #3779cd; }
+
+/* line 86, ../../src/rig/scss/_global.scss */
+.link, p a {
+  background-repeat: repeat-x;
+  -webkit-background-size: .1rem .1rem;
+  background-size: .1rem .1rem;
+  background-position: 0 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#588fd5));
+  background-image: -webkit-linear-gradient(top, transparent 50%, #588fd5 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #588fd5 50%);
+  text-shadow: 1px 0 #FFF, 2px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF; }
+  /* line 90, ../../src/rig/scss/_global.scss */
+  .link:hover, p a:hover {
+    background-repeat: repeat-x;
+    -webkit-background-size: .1rem .1rem;
+    background-size: .1rem .1rem;
+    background-position: 0 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#3779cd));
+    background-image: -webkit-linear-gradient(top, transparent 50%, #3779cd 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #3779cd 50%); }
+
+/* line 95, ../../src/rig/scss/_global.scss */
+p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5em; }
+  /* line 100, ../../src/rig/scss/_global.scss */
+  p a {
+    text-decoration: none;
+    margin: 0 .2em; }
+
+/* line 107, ../../src/rig/scss/_global.scss */
+strong {
+  font-weight: 700; }
+
+/* line 111, ../../src/rig/scss/_global.scss */
+em {
+  font-style: italic; }
+
+/* line 115, ../../src/rig/scss/_global.scss */
+small {
+  font-size: .7em; }
+
+/* line 119, ../../src/rig/scss/_global.scss */
+div, header, section, nav, article, aside {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 124, ../../src/rig/scss/_global.scss */
+::-moz-selection {
+  background: #588fd5;
+  color: white; }
+::selection {
+  background: #588fd5;
+  color: white; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * LISTS
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 135, ../../src/rig/scss/_global.scss */
+ul, ol {
+  padding: 0;
+  list-style: none;
+  vertical-align: top; }
+  /* line 140, ../../src/rig/scss/_global.scss */
+  ul li, ol li {
+    padding: .2em;
+    padding-left: 16px; }
+
+/* line 146, ../../src/rig/scss/_global.scss */
+.ul li::before {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  display: inline-block;
+  font-size: .9em;
+  color: #588fd5;
+  margin-right: 1em; }
+
+/* line 154, ../../src/rig/scss/_global.scss */
+.ul--check li::before {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c"; }
+
+/* line 158, ../../src/rig/scss/_global.scss */
+.ul__title {
+  padding: 0.8em;
+  padding-left: 24px;
+  font-weight: 700;
+  display: block; }
+  /* line 164, ../../src/rig/scss/_global.scss */
+  .ul__title:before {
+    content: none !important;
+    width: 0 !important; }
+
+/* line 170, ../../src/rig/scss/_global.scss */
+.ol {
+  counter-reset: list-counter; }
+  /* line 173, ../../src/rig/scss/_global.scss */
+  .ol li:before {
+    position: relative;
+    display: inline-block;
+    counter-increment: list-counter;
+    content: counter(list-counter);
+    width: 1em;
+    margin-left: -8px;
+    opacity: .3; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * FIGURE and IMG
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 191, ../../src/rig/scss/_global.scss */
+figure {
+  margin: 0; }
+
+/* line 195, ../../src/rig/scss/_global.scss */
+img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * CODE and PRE
+ *
+ * PRE blocks will use Prism for Syntax Highlighting
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 209, ../../src/rig/scss/_global.scss */
+code, pre {
+  background: #101b27;
+  border-radius: 0.4rem;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: .8em; }
+
+/* line 217, ../../src/rig/scss/_global.scss */
+code {
+  padding: 0 8px;
+  display: inline-block;
+  line-height: 2em;
+  margin: 0 8px;
+  color: white; }
+
+/* line 225, ../../src/rig/scss/_global.scss */
+pre {
+  padding: 16px 8px; }
+  /* line 228, ../../src/rig/scss/_global.scss */
+  pre h3 {
+    font-size: .8em;
+    margin: 0; }
+  /* line 233, ../../src/rig/scss/_global.scss */
+  pre code {
+    padding-top: 8px;
+    background: none;
+    padding: 0;
+    margin: 0; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * BLOCKQUOTE
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 248, ../../src/rig/scss/_global.scss */
+blockquote {
+  position: relative;
+  border-left: 3px double #a6afb8;
+  color: #58626d;
+  font-family: "Bariol", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0 16px;
+  margin: 16px 0; }
+  /* line 259, ../../src/rig/scss/_global.scss */
+  blockquote p {
+    margin: 0; }
+  /* line 263, ../../src/rig/scss/_global.scss */
+  blockquote footer {
+    color: #7c8895; }
+    /* line 266, ../../src/rig/scss/_global.scss */
+    blockquote footer::before {
+      font-family: FontAwesome;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f068";
+      font-size: .8em;
+      margin-right: .5em; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Helper Classes
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 280, ../../src/rig/scss/_global.scss */
+.is-hidden {
+  font-size: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0; }
+
+/* line 289, ../../src/rig/scss/_global.scss */
+.ta-left {
+  text-align: left; }
+
+/* line 290, ../../src/rig/scss/_global.scss */
+.ta-right {
+  text-align: right; }
+
+/* line 291, ../../src/rig/scss/_global.scss */
+.ta-center {
+  text-align: center; }
+
+/* line 293, ../../src/rig/scss/_global.scss */
+.is-capitalized {
+  text-transform: capitalize; }
+
+/* line 294, ../../src/rig/scss/_global.scss */
+.is-uppercase {
+  text-transform: uppercase; }
+
+/* line 295, ../../src/rig/scss/_global.scss */
+.is-italic {
+  font-style: italic; }
+
+/* line 296, ../../src/rig/scss/_global.scss */
+.is-bold {
+  font-weight: bold; }
+
+/* line 298, ../../src/rig/scss/_global.scss */
+.has-border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 299, ../../src/rig/scss/_global.scss */
+.has-border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 300, ../../src/rig/scss/_global.scss */
+.has-border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 301, ../../src/rig/scss/_global.scss */
+.has-border-left {
+  border-left: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 303, ../../src/rig/scss/_global.scss */
+.clr {
+  zoom: 1; }
+
+/* line 305, ../../src/rig/scss/_global.scss */
+.clr:before,
+.clr:after {
+  content: "";
+  display: table; }
+
+/* line 311, ../../src/rig/scss/_global.scss */
+.clr:after {
+  clear: both; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * INPUTS
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 319, ../../src/rig/scss/_global.scss */
+input:focus, button:focus, textarea:focus, select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SITEWIDE ELEMENT-CLASSES
+ * ------------------------------------------------------------------------------ *
+ */
+@media only screen and (min-width: 60rem) {
+  /* line 333, ../../src/rig/scss/_global.scss */
+  .only-lg {
+    display: inherit; }
+
+  /* line 337, ../../src/rig/scss/_global.scss */
+  .only-md,
+  .only-sm,
+  .only-xs {
+    display: none; } }
+@media only screen and (min-width: 45rem) and (max-width: 60rem) {
+  /* line 346, ../../src/rig/scss/_global.scss */
+  .only-till-md {
+    display: none; }
+
+  /* line 350, ../../src/rig/scss/_global.scss */
+  .only-md {
+    display: inherit; }
+
+  /* line 354, ../../src/rig/scss/_global.scss */
+  .only-lg,
+  .only-sm,
+  .only-xs {
+    display: none; } }
+@media only screen and (min-width: 30rem) and (max-width: 45rem) {
+  /* line 363, ../../src/rig/scss/_global.scss */
+  .only-till-md,
+  .only-till-sm {
+    display: none; }
+
+  /* line 368, ../../src/rig/scss/_global.scss */
+  .only-sm {
+    display: inherit; }
+
+  /* line 372, ../../src/rig/scss/_global.scss */
+  .only-lg,
+  .only-md,
+  .only-xs {
+    display: none; } }
+@media only screen and (max-width: 30rem) {
+  /* line 381, ../../src/rig/scss/_global.scss */
+  .only-till-md,
+  .only-till-sm,
+  .only-till-xs {
+    display: none; }
+
+  /* line 387, ../../src/rig/scss/_global.scss */
+  .only-xs {
+    display: inherit; }
+
+  /* line 391, ../../src/rig/scss/_global.scss */
+  .only-lg,
+  .only-md,
+  .only-sm {
+    display: none; } }
+/* line 398, ../../src/rig/scss/_global.scss */
+.contentWrapper {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-width: 68rem;
+  text-align: left;
+  padding: 0 16px; }
+
+/*
+** ====================================================
+** GRID
+**
+** For The Website we provide a very simplistic Grid that should still give us
+** full flexibility in the end.
+** ====================================================
+**/
+/* line 11, ../../src/rig/scss/elements/_grids.scss */
+.grid {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-size: 0;
+  margin-left: -16px; }
+
+/* line 21, ../../src/rig/scss/elements/_grids.scss */
+.row {
+  display: block;
+  width: 100%;
+  font-size: 0; }
+
+/* line 28, ../../src/rig/scss/elements/_grids.scss */
+[class*="col"] {
+  font-size: 16px;
+  display: inline-block;
+  padding: 0 16px;
+  vertical-align: top;
+  position: relative;
+  width: 100%; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * The Grid Col Classes
+ * ------------------------------------------------------------------------------ *
+ */
+@media only screen and (min-width: 60rem) {
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg10 {
+    width: 10% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset10 {
+    margin-left: 10% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail10 {
+    margin-right: 10% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg15 {
+    width: 15% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset15 {
+    margin-left: 15% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail15 {
+    margin-right: 15% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg20 {
+    width: 20% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset20 {
+    margin-left: 20% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail20 {
+    margin-right: 20% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg25 {
+    width: 25% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset25 {
+    margin-left: 25% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail25 {
+    margin-right: 25% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg30 {
+    width: 30% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset30 {
+    margin-left: 30% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail30 {
+    margin-right: 30% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg33 {
+    width: 33.3333% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset33 {
+    margin-left: 33.3333% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail33 {
+    margin-right: 33.3333% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg40 {
+    width: 40% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset40 {
+    margin-left: 40% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail40 {
+    margin-right: 40% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg50 {
+    width: 50% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset50 {
+    margin-left: 50% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail50 {
+    margin-right: 50% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg60 {
+    width: 60% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset60 {
+    margin-left: 60% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail60 {
+    margin-right: 60% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg66 {
+    width: 66.6666% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset66 {
+    margin-left: 66.6666% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail66 {
+    margin-right: 66.6666% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg70 {
+    width: 70% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset70 {
+    margin-left: 70% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail70 {
+    margin-right: 70% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg75 {
+    width: 75% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset75 {
+    margin-left: 75% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail75 {
+    margin-right: 75% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg80 {
+    width: 80% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset80 {
+    margin-left: 80% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail80 {
+    margin-right: 80% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg85 {
+    width: 85% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset85 {
+    margin-left: 85% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail85 {
+    margin-right: 85% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg90 {
+    width: 90% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .collg--offset90 {
+    margin-left: 90% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .collg-tail90 {
+    margin-right: 90% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .collg100 {
+    width: 100% !important; } }
+@media only screen and (min-width: 45rem) and (max-width: 60rem) {
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd10 {
+    width: 10% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset10 {
+    margin-left: 10% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail10 {
+    margin-right: 10% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd15 {
+    width: 15% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset15 {
+    margin-left: 15% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail15 {
+    margin-right: 15% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd20 {
+    width: 20% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset20 {
+    margin-left: 20% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail20 {
+    margin-right: 20% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd25 {
+    width: 25% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset25 {
+    margin-left: 25% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail25 {
+    margin-right: 25% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd30 {
+    width: 30% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset30 {
+    margin-left: 30% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail30 {
+    margin-right: 30% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd33 {
+    width: 33.3333% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset33 {
+    margin-left: 33.3333% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail33 {
+    margin-right: 33.3333% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd40 {
+    width: 40% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset40 {
+    margin-left: 40% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail40 {
+    margin-right: 40% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd50 {
+    width: 50% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset50 {
+    margin-left: 50% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail50 {
+    margin-right: 50% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd60 {
+    width: 60% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset60 {
+    margin-left: 60% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail60 {
+    margin-right: 60% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd66 {
+    width: 66.6666% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset66 {
+    margin-left: 66.6666% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail66 {
+    margin-right: 66.6666% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd70 {
+    width: 70% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset70 {
+    margin-left: 70% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail70 {
+    margin-right: 70% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd75 {
+    width: 75% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset75 {
+    margin-left: 75% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail75 {
+    margin-right: 75% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd80 {
+    width: 80% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset80 {
+    margin-left: 80% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail80 {
+    margin-right: 80% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd85 {
+    width: 85% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset85 {
+    margin-left: 85% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail85 {
+    margin-right: 85% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd90 {
+    width: 90% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colmd--offset90 {
+    margin-left: 90% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colmd-tail90 {
+    margin-right: 90% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colmd100 {
+    width: 100% !important; } }
+@media only screen and (min-width: 30rem) and (max-width: 45rem) {
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm10 {
+    width: 10% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset10 {
+    margin-left: 10% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail10 {
+    margin-right: 10% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm15 {
+    width: 15% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset15 {
+    margin-left: 15% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail15 {
+    margin-right: 15% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm20 {
+    width: 20% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset20 {
+    margin-left: 20% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail20 {
+    margin-right: 20% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm25 {
+    width: 25% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset25 {
+    margin-left: 25% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail25 {
+    margin-right: 25% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm30 {
+    width: 30% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset30 {
+    margin-left: 30% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail30 {
+    margin-right: 30% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm33 {
+    width: 33.3333% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset33 {
+    margin-left: 33.3333% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail33 {
+    margin-right: 33.3333% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm40 {
+    width: 40% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset40 {
+    margin-left: 40% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail40 {
+    margin-right: 40% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm50 {
+    width: 50% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset50 {
+    margin-left: 50% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail50 {
+    margin-right: 50% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm60 {
+    width: 60% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset60 {
+    margin-left: 60% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail60 {
+    margin-right: 60% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm66 {
+    width: 66.6666% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset66 {
+    margin-left: 66.6666% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail66 {
+    margin-right: 66.6666% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm70 {
+    width: 70% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset70 {
+    margin-left: 70% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail70 {
+    margin-right: 70% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm75 {
+    width: 75% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset75 {
+    margin-left: 75% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail75 {
+    margin-right: 75% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm80 {
+    width: 80% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset80 {
+    margin-left: 80% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail80 {
+    margin-right: 80% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm85 {
+    width: 85% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset85 {
+    margin-left: 85% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail85 {
+    margin-right: 85% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm90 {
+    width: 90% !important; }
+
+  /* line 66, ../../src/rig/scss/elements/_grids.scss */
+  .colsm--offset90 {
+    margin-left: 90% !important; }
+
+  /* line 78, ../../src/rig/scss/elements/_grids.scss */
+  .colsm-tail90 {
+    margin-right: 90% !important; }
+
+  /* line 53, ../../src/rig/scss/elements/_grids.scss */
+  .colsm100 {
+    width: 100% !important; } }
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs10 {
+  width: 10%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset10 {
+  margin-left: 10%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail10 {
+  margin-right: 10%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs15 {
+  width: 15%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset15 {
+  margin-left: 15%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail15 {
+  margin-right: 15%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs20 {
+  width: 20%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset20 {
+  margin-left: 20%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail20 {
+  margin-right: 20%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs25 {
+  width: 25%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset25 {
+  margin-left: 25%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail25 {
+  margin-right: 25%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs30 {
+  width: 30%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset30 {
+  margin-left: 30%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail30 {
+  margin-right: 30%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs33 {
+  width: 33.3333%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset33 {
+  margin-left: 33.3333%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail33 {
+  margin-right: 33.3333%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs40 {
+  width: 40%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset40 {
+  margin-left: 40%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail40 {
+  margin-right: 40%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs50 {
+  width: 50%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset50 {
+  margin-left: 50%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail50 {
+  margin-right: 50%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs60 {
+  width: 60%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset60 {
+  margin-left: 60%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail60 {
+  margin-right: 60%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs66 {
+  width: 66.6666%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset66 {
+  margin-left: 66.6666%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail66 {
+  margin-right: 66.6666%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs70 {
+  width: 70%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset70 {
+  margin-left: 70%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail70 {
+  margin-right: 70%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs75 {
+  width: 75%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset75 {
+  margin-left: 75%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail75 {
+  margin-right: 75%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs80 {
+  width: 80%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset80 {
+  margin-left: 80%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail80 {
+  margin-right: 80%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs85 {
+  width: 85%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset85 {
+  margin-left: 85%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail85 {
+  margin-right: 85%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs90 {
+  width: 90%; }
+
+/* line 66, ../../src/rig/scss/elements/_grids.scss */
+.colxs--offset90 {
+  margin-left: 90%; }
+
+/* line 78, ../../src/rig/scss/elements/_grids.scss */
+.colxs-tail90 {
+  margin-right: 90%; }
+
+/* line 53, ../../src/rig/scss/elements/_grids.scss */
+.colxs100 {
+  width: 100%; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Helper Classes
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 128, ../../src/rig/scss/elements/_grids.scss */
+.grid--verticalize {
+  height: 100%;
+  display: table; }
+  /* line 132, ../../src/rig/scss/elements/_grids.scss */
+  .grid--verticalize [class*="col"] {
+    vertical-align: middle;
+    display: table-cell; }
+
+/* line 139, ../../src/rig/scss/elements/_grids.scss */
+.col--cling,
+.grid--cling {
+  padding: 0; }
+
+/*
+** ====================================================
+** TYPOGRAPHY
+**
+** Basic classes for various typographical Effects
+** ====================================================
+**/
+/* line 12, ../../src/rig/scss/elements/_typography.scss */
+.is-prefixed-title span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #54bf5d;
+  display: block;
+  text-transform: none; }
+
+ /*
+** ====================================================
+** ICONS
+**
+** For backwards compatibility and the ease of usage till
+** SVG Spritesheets become better to use we provide FontAwesome
+** ====================================================
+**/
+/* line 12, ../../src/rig/scss/elements/_icons.scss */
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em; }
+
+/*
+** ====================================================
+** IMG
+**
+** Images can get the class .img for better using and some basic effects
+** ====================================================
+**/
+/* line 9, ../../src/rig/scss/elements/_imgs.scss */
+.img {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* line 14, ../../src/rig/scss/elements/_imgs.scss */
+.img--rounded {
+  border-radius: 200%; }
+
+/* line 19, ../../src/rig/scss/elements/_imgs.scss */
+.sticker {
+  position: relative;
+  height: 8rem;
+  width: 8rem; }
+  /* line 24, ../../src/rig/scss/elements/_imgs.scss */
+  .sticker .img {
+    border-radius: 200%; }
+  /* line 28, ../../src/rig/scss/elements/_imgs.scss */
+  .sticker::before {
+    position: absolute;
+    background: transparent;
+    content: "";
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 3.2px 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3.2px 0 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateY(4%);
+    -ms-transform: translateY(4%);
+    transform: translateY(4%);
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  /* line 43, ../../src/rig/scss/elements/_imgs.scss */
+  .sticker::after {
+    position: absolute;
+    content: "";
+    background: transparent;
+    border: 4px solid white;
+    width: 100%;
+    height: 100%;
+    border-radius: 200%;
+    left: -4px;
+    top: -4px; }
+  /* line 55, ../../src/rig/scss/elements/_imgs.scss */
+  .sticker figcaption {
+    width: 200%;
+    -webkit-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    transform: translateX(-25%);
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1rem; }
+    /* line 62, ../../src/rig/scss/elements/_imgs.scss */
+    .sticker figcaption strong, .sticker figcaption em {
+      display: block; }
+
+/* line 68, ../../src/rig/scss/elements/_imgs.scss */
+.sticker--icon {
+  background: #588fd5;
+  color: white;
+  border-radius: 50%;
+  line-height: 9rem; }
+  /* line 74, ../../src/rig/scss/elements/_imgs.scss */
+  .sticker--icon .icon {
+    position: relative;
+    font-size: 2rem; }
+
+/*
+** ====================================================
+** INPUTS
+**
+** Of course we need to handle various Inputs and Form Elements
+** ====================================================
+**/
+/*
+ * ------------------------------------------------------------------------------ *
+ * LABELS
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 15, ../../src/rig/scss/elements/_inputs.scss */
+.label {
+  position: relative;
+  display: block;
+  margin-bottom: 1em; }
+
+/* line 21, ../../src/rig/scss/elements/_inputs.scss */
+.label__title {
+  position: absolute;
+  top: 22.4px;
+  left: 22.4px;
+  color: #7b889a;
+  text-transform: capitalize;
+  -webkit-transition: all 200ms;
+  transition: all 200ms; }
+
+/* line 31, ../../src/rig/scss/elements/_inputs.scss */
+.label.has-focus .label__title,
+.label.has-content .label__title,
+[data-watch="select"] .label__title {
+  top: 8px;
+  left: 24px;
+  color: #588fd5;
+  font-size: .8em; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * INPUTS
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 46, ../../src/rig/scss/elements/_inputs.scss */
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e4;
+  background: white;
+  padding: 24px;
+  font-size: .9em;
+  color: #767676;
+  -webkit-transition: background 200ms, border 200ms;
+  transition: background 200ms, border 200ms;
+  text-shadow: 1px 0 #FFF ,2px 2px #FFF;
+  border-radius: 0.4rem; }
+  /* line 60, ../../src/rig/scss/elements/_inputs.scss */
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  select:focus {
+    background: #fcfafa;
+    border: 1px solid #e2e2e4; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SELECT
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 72, ../../src/rig/scss/elements/_inputs.scss */
+[data-watch="select"]:after {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f078";
+  position: absolute;
+  background: #588fd5;
+  border-radius: .2em;
+  -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 3px solid #2d68b3;
+  width: 1.2em;
+  height: 1.2em;
+  top: 19.2px;
+  right: 16px;
+  color: white;
+  padding: 8px;
+  padding-bottom: 4px;
+  text-align: center;
+  font-size: .8em;
+  pointer-events: none; }
+
+/* line 91, ../../src/rig/scss/elements/_inputs.scss */
+select {
+  appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 70.4px;
+  cursor: pointer; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * CHECKBOX
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 103, ../../src/rig/scss/elements/_inputs.scss */
+.checkbox {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2em;
+  margin: 1em 0; }
+  /* line 110, ../../src/rig/scss/elements/_inputs.scss */
+  .checkbox input {
+    visibility: none; }
+    /* line 113, ../../src/rig/scss/elements/_inputs.scss */
+    .checkbox input + span {
+      padding-left: 32px; }
+      /* line 116, ../../src/rig/scss/elements/_inputs.scss */
+      .checkbox input + span:before {
+        content: "";
+        position: absolute;
+        background: white;
+        border-radius: .2em;
+        left: 0;
+        width: 2em;
+        height: 2em;
+        border: 1px solid #e2e2e4; }
+      /* line 127, ../../src/rig/scss/elements/_inputs.scss */
+      .checkbox input + span .icon {
+        color: #8f8f8f;
+        opacity: .2;
+        position: absolute;
+        left: .6em;
+        top: .5em;
+        -webkit-transition: color 200ms, opacity 200ms;
+        transition: color 200ms, opacity 200ms; }
+  /* line 138, ../../src/rig/scss/elements/_inputs.scss */
+  .checkbox input:checked + span .icon {
+    color: #588fd5;
+    opacity: 1; }
+
+/* line 145, ../../src/rig/scss/elements/_inputs.scss */
+.checkboxSwitch {
+  padding: 16px 0;
+  padding-right: 10rem;
+  position: relative;
+  vertical-align: middle;
+  display: block;
+  vertical-align: middle; }
+  /* line 153, ../../src/rig/scss/elements/_inputs.scss */
+  .checkboxSwitch:before {
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 3rem;
+    background: white;
+    border: 1px solid #e2e2e4;
+    border-radius: .2em;
+    right: 0;
+    top: 0; }
+  /* line 165, ../../src/rig/scss/elements/_inputs.scss */
+  .checkboxSwitch input {
+    visibility: hidden;
+    position: absolute; }
+  /* line 171, ../../src/rig/scss/elements/_inputs.scss */
+  .checkboxSwitch input + .checkboxSwitch__indicator {
+    right: 3.4rem;
+    background: #e2e2e4;
+    border-color: #bababf; }
+  /* line 177, ../../src/rig/scss/elements/_inputs.scss */
+  .checkboxSwitch input:checked + .checkboxSwitch__indicator {
+    right: .2rem;
+    background: #588fd5;
+    border-color: #2d68b3; }
+
+/* line 184, ../../src/rig/scss/elements/_inputs.scss */
+.checkboxSwitch__indicator {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 2.6rem;
+  height: 2.7rem;
+  position: absolute;
+  background: #e2e2e4;
+  top: .2rem;
+  pointer-events: none;
+  border-radius: .2em;
+  -webkit-transition: right 200ms, background 200ms, border-color 200ms;
+  transition: right 200ms, background 200ms, border-color 200ms; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SWITCH
+ *
+ * Switches give you a nice way of putting a radiogroup in a nice form
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 207, ../../src/rig/scss/elements/_inputs.scss */
+.switch {
+  display: inline-block;
+  border: 1px solid #e2e2e4;
+  border-radius: .2em; }
+
+/* line 213, ../../src/rig/scss/elements/_inputs.scss */
+.switch__label {
+  display: inline-block; }
+  /* line 216, ../../src/rig/scss/elements/_inputs.scss */
+  .switch__label:first-of-type span {
+    border-radius: .2em 0 0 .2em; }
+  /* line 220, ../../src/rig/scss/elements/_inputs.scss */
+  .switch__label:last-of-type span {
+    border-radius: 0 .2em .2em 0; }
+  /* line 224, ../../src/rig/scss/elements/_inputs.scss */
+  .switch__label input {
+    visibility: hidden;
+    position: absolute; }
+  /* line 229, ../../src/rig/scss/elements/_inputs.scss */
+  .switch__label span {
+    display: inline-block;
+    padding: 16px;
+    background: white;
+    color: rgba(143, 143, 143, 0.4);
+    text-shadow: 1px 0 #FFF ,2px 2px #FFF;
+    -webkit-transition: color 100ms, background 200ms, text-shadow 100ms;
+    transition: color 100ms, background 200ms, text-shadow 100ms;
+    text-align: center;
+    min-width: 4em;
+    cursor: pointer; }
+  /* line 241, ../../src/rig/scss/elements/_inputs.scss */
+  .switch__label input:checked + span {
+    background: #588fd5;
+    color: white;
+    text-shadow: 1px 0 rgba(0, 0, 0, 0.5), 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: disabled; }
+
+/*
+** ====================================================
+** BUTTONS
+**
+** Of course we need Buttons, and Buttons need to look awesome
+** ====================================================
+**/
+/* line 9, ../../src/rig/scss/elements/_buttons.scss */
+.btn {
+  display: inline-block;
+  background: #588fd5;
+  border: none;
+  border-width: 0;
+  border-bottom-width: 3px;
+  border-style: solid;
+  border-radius: 0.4rem;
+  border-color: #2d68b3;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: .8em;
+  letter-spacing: 0.07em;
+  text-shadow: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 40px 16px;
+  margin: 16px;
+  margin-left: 0;
+  min-width: 3.2em;
+  -webkit-transition: background 200ms, -webkit-box-shadow 200ms;
+  transition: background 200ms, box-shadow 200ms;
+  appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  /* line 38, ../../src/rig/scss/elements/_buttons.scss */
+  .btn:hover {
+    background: #3779cd;
+    -webkit-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    color: white; }
+  /* line 44, ../../src/rig/scss/elements/_buttons.scss */
+  .btn:active {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); }
+  /* line 49, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.has-icon {
+    padding: 16px; }
+    /* line 52, ../../src/rig/scss/elements/_buttons.scss */
+    .btn.has-icon .icon {
+      color: white;
+      margin-left: 16px; }
+
+/* line 60, ../../src/rig/scss/elements/_buttons.scss */
+.btn--iconOnly {
+  padding: 16px 19.2px; }
+  /* line 63, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--iconOnly .icon {
+    color: white;
+    margin-bottom: -0.1em;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4); }
+
+/* line 70, ../../src/rig/scss/elements/_buttons.scss */
+.btn--flat {
+  border: none;
+  padding: 17.6px 40px 17.6px;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  /* line 76, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--flat.btn--iconOnly {
+    padding: 17.6px 19.2px; }
+
+/* line 81, ../../src/rig/scss/elements/_buttons.scss */
+.btn--prominent {
+  background: #54bf5d;
+  border-color: #36903e;
+  padding: 24px 40px; }
+  /* line 86, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--prominent:hover {
+    background: #40aa49; }
+  /* line 90, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--prominent.has-icon {
+    padding: 24px; }
+
+/* line 96, ../../src/rig/scss/elements/_buttons.scss */
+.btn--clean {
+  background: none;
+  border: 1px solid #588fd5;
+  color: #588fd5;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  /* line 106, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--clean.has-icon .icon {
+    color: #588fd5;
+    margin-left: 16px; }
+  /* line 113, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--clean:hover {
+    background: #588fd5;
+    color: white; }
+    /* line 117, ../../src/rig/scss/elements/_buttons.scss */
+    .btn--clean:hover .icon {
+      color: white; }
+
+/* line 124, ../../src/rig/scss/elements/_buttons.scss */
+.btn--link {
+  background: none;
+  border: none;
+  color: #588fd5;
+  font-weight: 400;
+  letter-spacing: .01em;
+  text-transform: none;
+  padding: 0;
+  margin: 16px 40px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-repeat: repeat-x;
+  -webkit-background-size: .1rem .1rem;
+  background-size: .1rem .1rem;
+  background-position: 0 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#588fd5));
+  background-image: -webkit-linear-gradient(top, transparent 50%, #588fd5 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #588fd5 50%); }
+  /* line 136, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--link:before {
+    font-family: FontAwesome;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f054";
+    position: absolute;
+    margin-left: -24px;
+    font-size: .6em;
+    line-height: 2.2em;
+    -webkit-transition: margin-left 200ms;
+    transition: margin-left 200ms; }
+  /* line 145, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--link:hover {
+    background: none;
+    color: #3779cd;
+    background-repeat: repeat-x;
+    -webkit-background-size: .1rem .1rem;
+    background-size: .1rem .1rem;
+    background-position: 0 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#3779cd));
+    background-image: -webkit-linear-gradient(top, transparent 50%, #3779cd 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #3779cd 50%); }
+    /* line 150, ../../src/rig/scss/elements/_buttons.scss */
+    .btn--link:hover:before {
+      margin-left: -16px; }
+
+/* line 156, ../../src/rig/scss/elements/_buttons.scss */
+.btn--full {
+  width: 100%; }
+  /* line 162, ../../src/rig/scss/elements/_buttons.scss */
+  .btn--full.has-icon .icon {
+    float: right; }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SPECIAL BUTTONS
+ * ------------------------------------------------------------------------------ *
+ */
+/* line 174, ../../src/rig/scss/elements/_buttons.scss */
+.btn.is-neutral {
+  background: #e2e5e9;
+  border-color: #b6bec8;
+  color: #7b889a; }
+  /* line 179, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.is-neutral:hover {
+    background: #ced3da; }
+  /* line 184, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.is-neutral.btn--accent {
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+
+/* line 189, ../../src/rig/scss/elements/_buttons.scss */
+.btn.is-success {
+  background: #54bf5d;
+  border-color: #36903e; }
+  /* line 193, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.is-success:hover {
+    background: #41ae4a; }
+
+/* line 198, ../../src/rig/scss/elements/_buttons.scss */
+.btn.is-danger {
+  background: #fc594a;
+  border-color: #dc1604; }
+  /* line 202, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.is-danger:hover {
+    background: #fb3927; }
+
+/* line 207, ../../src/rig/scss/elements/_buttons.scss */
+.btn.is-dark {
+  background: #58626d;
+  border-color: #363c43; }
+  /* line 211, ../../src/rig/scss/elements/_buttons.scss */
+  .btn.is-dark:hover {
+    background: #485059; }
+
+/* line 217, ../../src/rig/scss/elements/_buttons.scss */
+.btn--github:before {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f09b";
+  float: left;
+  font-size: 2em;
+  line-height: .6em; }
+
+/* line 224, ../../src/rig/scss/elements/_buttons.scss */
+.btn--bitbucket:before {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f171";
+  float: left;
+  font-size: 2em;
+  line-height: .6em; }
+
+/*
+** ====================================================
+** TAGS
+**
+** Tags help you to show a commom topic between various content elements
+** ====================================================
+**/
+/* line 9, ../../src/rig/scss/elements/_tags.scss */
+.tags {
+  display: block; }
+
+/* line 13, ../../src/rig/scss/elements/_tags.scss */
+.tags > .tag {
+  background: #b1c0d2;
+  color: white;
+  border-radius: 0.4rem;
+  margin: 0 5.33333px 5.33333px 0;
+  padding: 0 5.33333px;
+  line-height: 1.6em;
+  font-size: .9rem;
+  display: inline-block; }
+  /* line 23, ../../src/rig/scss/elements/_tags.scss */
+  .tags > .tag:before {
+    content: "#"; }
+
+/*
+** ====================================================
+** WELLS
+**
+** Wells are a way of presenting Headlines or important notes
+** in an attention grabbing way
+** ====================================================
+**/
+/* line 10, ../../src/rig/scss/elements/_well.scss */
+.well {
+  text-align: center;
+  font-size: 1.8em;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 2em; }
+  /* line 16, ../../src/rig/scss/elements/_well.scss */
+  .well figure {
+    height: 3em; }
+  /* line 20, ../../src/rig/scss/elements/_well.scss */
+  .well p {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0 20%; }
+
+/* line 28, ../../src/rig/scss/elements/_well.scss */
+.well--paper {
+  background: #f3f6fb;
+  color: #6d7c8f;
+  padding: 2em 0; }
+  /* line 34, ../../src/rig/scss/elements/_well.scss */
+  .well--paper:before {
+    content: "";
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    background: white;
+    right: 0;
+    top: 0; }
+  /* line 44, ../../src/rig/scss/elements/_well.scss */
+  .well--paper:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-left: 1em solid #cfd7e3;
+    border-bottom: 1em solid #cfd7e3; }
