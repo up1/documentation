@@ -1,24 +1,9 @@
 doctype html
 html lang="en"
-
-  | {% include head.slim %}
-
+  |
+    {% include head.slim %}
   body
-
-    | {% include header.slim %}
-
-    section.parallax.parallax--small
-      .parallaxImg.parallaxImg--content
-
-    section.section.section--smallHeader
-      .grid.grid--verticalize.grid--cling
-        .col100
-          div.well
-            h2.well__title
-              | {{ page.title }}
-
-    section.section
-      .contentWrapper: .grid
-        | {{ content }}
-
-    | {% include footer.slim %}
+    |
+      {% include header.slim %}
+      {{ content }}
+      {% include footer.slim %}

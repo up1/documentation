@@ -1,0 +1,162 @@
+/*
+** ====================================================
+** VARIABLES.SCSS
+**
+** Define various variables that can be accessed in the framework
+** ====================================================
+*/
+
+
+/*
+ * BASE | values needed as base values for many things to come at a later point
+ */
+
+$base-font-size: 16px;
+$base-line-height: 1.5em;
+$base-padding: $base-font-size;
+$base-border-radius: .2rem;
+$base-letter-spacing: .07em;
+$base-content-width: 68rem;
+
+/*
+ * BREAKPOINTS | prefixed with bp
+ */
+
+$bpLarge: 60rem;
+$bpMedium: 45rem;
+$bpSmall: 30rem;
+
+/*
+ * VALUES | prefixed with v | are used as default values for some actions like dark or shadows
+ */
+
+$vDarken: 15%;
+$vBoxshadow: 0 4px 0 rgba(48,106,185,.15);
+$vBorder: 1px solid rgba(#000,.1);
+
+/*
+ * FONTS | prefixed with f
+ */
+
+$sans-serif:      'Bariol', sans-serif;
+$sans-serif-2:    'Lato', sans-serif;
+$fBody:           $sans-serif;
+$fHeading:        $sans-serif-2;
+$fCode:           'Lucida Console', Monaco, monospace;
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Generate a variable ($all-text-inputs) with a list of all html5
+ * input types that have a text-based input, excluding textarea.
+ * ------------------------------------------------------------------------------ *
+ */
+
+$_inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+              'input[type="url"]',
+              'input[type="color"]',
+              'input[type="date"]',
+              'input[type="datetime"]',
+              'input[type="datetime-local"]',
+              'input[type="month"]',
+              'input[type="time"]',
+              'input[type="week"]';
+
+// Bare inputs
+$all-text-inputs: assign-inputs($_inputs-list);
+
+// Hover Pseudo-class
+$all-text-inputs-hover: assign-inputs($_inputs-list, hover);
+
+// Focus Pseudo-class
+$all-text-inputs-focus: assign-inputs($_inputs-list, focus);
+
+/*
+ * MAPS | prefixed with m
+ *
+ */
+
+$mZindex: (
+  interactionElement: 50,
+  sticker: 40,
+  pageHeader : 100
+);
+
+/*
+ * COLORS | prefixed with c
+ *
+ * Helpercolors get defined with _c, those shouldn't be used in real code (except color will be the same forever).
+ * Instead create a variable referencing those.
+ */
+
+// Black & White
+$_cWhite:           #FFFFFF;
+$_cBlack:           #000000;
+
+// RGB
+$_cRed:             #FC594A;
+$_cGreen:           #60CC69;
+$_cBlue:            #5A95E5;
+$_cDarkblue:        #20334d;
+
+$_cDarkblue:        #101b27;
+$_cLightgrey:       #F3F6FB;
+$_cGrey:            #E2E5E9;
+$_cDarkgrey:        #58626D;
+
+// Body
+$cBody:             #7B889A;
+$cBodyBg:           $_cWhite;
+
+// Text
+$cText:             $cBody;
+$cTextInfo:         #C1C1C1;
+
+// STATI
+$cIsNeutral:        $_cGrey;
+$cIsNeutralAccent:  darken($cIsNeutral, 7%);
+$cIsSuccess:        $_cGreen;
+$cIsSuccessAccent:  darken($cIsSuccess, 7%);
+$cIsDanger:         $_cRed;
+$cIsDangerAccent:   darken($cIsDanger, 7%);
+$cIsDark:           $_cDarkgrey;
+$cIsDarkAccent:     darken($cIsDark, 7%);
+
+// Anchors
+$cAnchor:           $_cBlue;
+$cAnchorHover:      darken($cAnchor, 8%);
+
+// Buttons
+$cButton:                 $_cWhite;
+$cButtonBg:               $cAnchor;
+$cButtonBgHover:          darken($cButtonBg, 8%);
+$cButtonPrimaryBg:        $_cGreen;
+$cButtonPrimaryBgHover:   darken($cButtonPrimaryBg, 8%);
+
+// Code
+$cCode:             $_cWhite;
+$cCodeBg:           $_cDarkblue;
+
+// Blockquote
+$cBlockquote:       $_cDarkgrey;
+
+// Inputs
+$cInput:            #8F8F8F;
+$cInputBg:          $_cWhite;
+$cInputBgFocus:     #FCFAFA;
+$cInputBorder:      #E2E2E4;
+$cLabel:            $_cBlue;
+
+// Tags
+$cTagBg:            #b1c0d2;
+$cTag:              $_cWhite;
+
+// Wells
+$cWell:             rgba(0,0,0,.6);
+$cPapernote:        #6d7c8f;
+$cPapernoteBg:      #f3f6fb;
+$cPapernoteAlt:     #cfd7e3;

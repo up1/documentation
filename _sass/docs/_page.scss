@@ -1,0 +1,118 @@
+.contentWrapper.has-meta {
+  max-width: $bpLarge;
+  padding: 0 10rem;
+  position: relative;
+}
+
+.meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.meta__left,
+.meta__right {
+  width: 10rem;
+  position: absolute;
+  left: 0;
+  margin-top: 2rem;
+}
+
+.meta__right {
+  right: 0;
+  left: auto;
+}
+
+.meta__backLink {
+  display: block;
+  padding-left: 2.5rem;
+  line-height: 1rem;
+  font-size: .8rem;
+
+  &:hover::before {
+    transform: translateX(-100%);
+  }
+
+  &::before {
+    @include showIcon($fa-var-angle-left);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    display: block;
+    width: 2rem;
+    line-height: 2rem;
+    border: 1px solid $cAnchor;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    transition: transform 150ms;
+  }
+}
+
+.tagList {
+  margin: 0;
+
+  li {
+    padding: .2rem 0 .2rem 1rem;
+  }
+}
+
+.tag {
+  color: $_cWhite;
+  background: darken($_cGrey,5%);
+  display: inline-block;
+  padding: .1rem .5rem;
+  border-radius: .2rem;
+  font-size: .9rem;
+
+  &:hover {
+    background: $cAnchor;
+    color: $_cWhite;
+  }
+}
+
+.breadcrumbs {
+  a {
+    color: darken($_cGrey,10%);
+    display: inline-block;
+    margin: 0 .5rem;
+    font-size: .9rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-of-type)::after {
+      content: "/";
+      position: relative;
+      right: -.5rem;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.pageTitle {
+  margin-top: 0;
+}
+
+.contentLink {
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before {
+    @include showIcon($fa-var-link);
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    line-height: 2.5rem;
+    color: $cAnchor;
+  }
+}
+

@@ -1,0 +1,72 @@
+/*
+** ====================================================
+** MIXINS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+
+// Add a nice looking underline to your element
+@mixin sexyUnderline($color) {
+  background: {
+    repeat: repeat-x;
+    size: .1rem .1rem;
+    position: 0 100%;
+    image: linear-gradient(to bottom, transparent 50%, $color 50%);
+  }
+}
+
+// Thise mixin is necessary as AUTOPREFIXER doesn't support appearance yet
+@mixin appearance($value: none) {
+  appearance: $value;
+  -o-appearance: $value;
+  -ms-appearance: $value;
+  -moz-appearance: $value;
+  -webkit-appearance: $value;
+}
+
+// This function let's you load a Icon from the font-awesome icon font
+// it's usually blanned to be added in ::before or ::after
+// i.e. $fa-var-check
+@import '_font_variables';
+
+@mixin showIcon($icon) {
+  font-family: FontAwesome;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: $icon;
+}
+
+%arrowBasics {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+// Arrow Triangles
+@mixin arrowLeft($color: $_cWhite) {
+  @extend %arrowBasics;
+  border: 1rem solid transparent;
+  border-right: 1rem solid $color;
+}
+
+@mixin arrowRight($color: $_cWhite) {
+  @extend %arrowBasics;
+  border: 1rem solid transparent;
+  border-left: 1rem solid $color;
+}
+
+@mixin arrowUp($color: $_cWhite) {
+  @extend %arrowBasics;
+  border: 1rem solid transparent;
+  border-bottom: 1rem solid $color;
+}
+
+@mixin arrowDown($color: $_cWhite) {
+  @extend %arrowBasics;
+  border: 1rem solid transparent;
+  border-top: 1rem solid $color;
+}

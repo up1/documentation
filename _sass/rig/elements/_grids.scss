@@ -1,0 +1,169 @@
+/*
+** ====================================================
+** GRID
+**
+** For The Website we provide a very simplistic Grid that should still give us
+** full flexibility in the end.
+** ====================================================
+**/
+
+// Basic Class that prepares the content for being wrapped in cols
+.grid {
+  display: block;
+  width: 100%;
+  padding: 0 $base-padding;
+  margin-left: -$base-padding;
+  box-sizing: content-box;
+  font-size: 0;
+
+  @media only screen and (max-width: $bpMedium) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Sometimes you want to wrap cols in rows. Take this for it
+.row {
+  display: block;
+  width: 100%;
+  font-size: 0; // This helps if rows get nested inside grids
+}
+
+// Some General Settings for all Cols
+[class*="col"] {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0 $base-padding;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * The Grid Col Classes
+ * ------------------------------------------------------------------------------ *
+ */
+
+// This Mixin finally creats the cols we need for all important percentages
+@mixin makeCols($class) {
+  $important: '';
+
+  @if $class == 'lg' or $class == 'md' or $class == 'sm' {
+    $important: ' !important';
+  }
+
+  @each $col in 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100 {
+    // For small Columns
+    .col#{$class}#{$col} {
+      @if $col == 33 {
+        width: 33.3333%#{$important};
+      }
+      @else if $col == 66 {
+        width: 66.6666%#{$important};
+      }
+      @else {
+        width: #{$col + "%"}#{$important};
+      }
+    } // End Col
+
+    @if $col != 100 {
+      .col#{$class}--offset#{$col} {
+        @if $col == 33 {
+          margin-left: 33.3333%#{$important};
+        }
+        @else if $col == 66 {
+          margin-left: 66.6666%#{$important};
+        }
+        @else {
+          margin-left: #{$col + "%"}#{$important};
+        }
+      } // END --offset
+
+      .col#{$class}--tail#{$col} {
+        @if $col == 33 {
+          margin-right: 33.3333%#{$important};
+        }
+        @else if $col == 66 {
+          margin-right: 66.6666%#{$important};
+        }
+        @else {
+          margin-right: #{$col + "%"}#{$important};
+        }
+      } // End --tail
+    } // End $col != 100
+  } // END $col
+} // END Mixin
+
+// Define Cols for all important Sizes
+@each $size in 'lg','md','sm','xs' {
+
+  @if $size == 'lg' {
+    @media only screen and (min-width: $bpLarge) {
+      @include makeCols('lg');
+    } // End @media
+  } // End $size == 'lg'
+
+  @if $size == 'md' {
+    @media only screen and (min-width: $bpMedium) and (max-width: $bpLarge) {
+      @include makeCols('md');
+    } // End @media
+  } // End $size == 'md'
+
+  @if $size == 'sm' {
+    @media only screen and (min-width: $bpSmall) and (max-width: $bpMedium) {
+      @include makeCols('sm');
+    } // End @media
+  } // End $size == 'sm'
+
+  // XS Cols should be valid for all screensizes if nothing else is defined
+  @if $size == 'xs' {
+    @include makeCols('xs');
+  } // End $size == 'xs'
+
+} // End $size
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Helper Classes
+ * ------------------------------------------------------------------------------ *
+ */
+
+// This Trick helps to put col verticaly middle in high containers
+.grid--verticalize {
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+
+  > [class*="col"] {
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+  @media only screen and (min-width: $bpLarge) {
+    > .collg100:not(.well) { display: block; }
+  }
+
+  @media only screen and (min-width: $bpMedium) and (max-width: $bpLarge) {
+    > .colmd100:not(.well) { display: block; }
+  }
+
+  @media only screen and (min-width: $bpSmall) and (max-width: $bpMedium) {
+    > .colsm100:not(.well) { display: block; }
+  }
+
+  @media only screen and (max-width: $bpSmall) {
+    > .colxs100:not(.well) { display: block; }
+  }
+}
+
+.grid--full {
+  margin: 0;
+}
+
+// Sometimes you don't want any padding at all on the cols or the grid
+.col--cling,
+.grid--cling {
+  padding: 0;
+}

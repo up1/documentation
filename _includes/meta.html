@@ -1,0 +1,13 @@
+<div class="meta">
+  <div class="meta__left">
+    <a class="meta__backLink">Codeship Documentation</a>
+  </div>
+
+  {% if include.tags %}
+  <div class="meta__right">
+    <ul class="tagList">
+      {% for tag in include.tags %}<li><a class="tag">#{{ tag | downcase }}</a></li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

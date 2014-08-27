@@ -1,4 +1,7 @@
 _site
 
+# SASS
+.sass-cache
+
 # OS X specific
 .DS_Store

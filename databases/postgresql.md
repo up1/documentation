@@ -6,8 +6,6 @@ tags:
   - postgresql
 category: Services
 ---
-# PostgreSQL
-
 The default databases created for you are **development** and **test**.
 
 PostgreSQL ```9.2.4``` runs on the default port and the credentials are stored in the ```PG_USER``` and ```PG_PASSWORD``` environment variables.

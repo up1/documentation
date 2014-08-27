@@ -1,0 +1,22 @@
+/*
+** ====================================================
+** FUNCTIONS.SCSS
+**
+** Features some basic helper functions that can be used
+** thoughout other CSS Files.
+** ====================================================
+*/
+
+
+// This Function let's you assign multiple Selectors to a list with :pseudo-selectors if needed
+@function assign-inputs($inputs, $pseudo: null) {
+  $list : ();
+
+  @each $input in $inputs {
+    $input: unquote($input);
+    $input: if($pseudo, $input + ":" + $pseudo, $input);
+    $list: append($list, $input, comma);
+  }
+
+  @return $list;
+}

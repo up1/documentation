@@ -1,0 +1,239 @@
+/*
+** ====================================================
+** BUTTONS
+**
+** Of course we need Buttons, and Buttons need to look awesome
+** ====================================================
+**/
+
+.btn {
+  display: inline-block;
+  background: $cAnchor;
+  border: none;
+  border: {
+    width: 0;
+    bottom-width: 3px;
+    style: solid;
+    radius: $base-border-radius;
+    color: darken($cAnchor, $vDarken); }// if Border is used provide this color
+  box-shadow: 0 4px 9px rgba(0,0,0,.15);
+  box-sizing: border-box;
+  color: $cButton;
+  cursor: pointer;
+  font: {
+    family: $fHeading;
+    weight: 700;
+    size: 1rem; }
+  letter-spacing: $base-letter-spacing;
+  text-shadow: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: $base-padding $base-padding*2.5 $base-padding;
+  margin: $base-padding;
+  margin-left: 0;
+  min-width: 3.2em;
+  transition: background 200ms, box-shadow 200ms;
+  @include appearance();
+
+  &:hover {
+    background: $cAnchorHover;
+    box-shadow: 0 0 0 rgba(#000, 0); // If there is a Boxshadow, remove it on Hover
+    color: $cButton;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 5px rgba(#000, .5);
+  }
+
+  // HAS
+  &.has-icon {
+    padding: $base-padding;
+
+    .icon {
+      color: $cButton;
+      margin-left: .7rem;
+    }
+  }
+}
+
+// Button with only an Icon
+.btn--iconOnly {
+  padding: $base-padding $base-padding*1.2;
+
+  .icon {
+    color: $cButton;
+    margin-bottom: -0.1em;
+    transform: scale(1.4);
+  }
+}
+
+.btn--flat {
+  border: none;
+  padding: $base-padding*1.1 $base-padding*2.5 $base-padding*1.1;
+  box-shadow: none;
+
+  // Edge Case
+  &.btn--iconOnly {
+    padding: $base-padding*1.1 $base-padding*1.2;
+  }
+}
+
+.btn--prominent {
+  background: $cButtonPrimaryBg;
+  border-color: darken($cButtonPrimaryBg, 15%);
+  padding: $base-padding*1.1 $base-padding*3.5;
+
+  &:hover {
+    background: $cButtonPrimaryBgHover;
+  }
+
+  &.has-icon {
+    padding: $base-padding*1.5;
+  }
+
+  &.btn--full:not(.has-icon) {
+    padding: $base-padding*1.1 0;
+  }
+}
+
+// Button with no filling
+.btn--clean {
+  background: none;
+  border: 1px solid $cAnchor;
+  color: $cAnchor;
+  transition: color 200ms;
+  box-shadow: none;
+
+  // HAS
+  &.has-icon {
+
+    .icon {
+      color: $cAnchor;
+      margin-left: $base-padding;
+    }
+  }
+
+
+  &:hover {
+    background: $cAnchor;
+    color: $cButton;
+
+    .icon {
+      color: $cButton;
+    }
+  }
+}
+
+// Button that should look like a link though
+.btn--link {
+  background: none;
+  border: none;
+  color: $cButtonBg;
+  font-weight: 400;
+  letter-spacing: .01em;
+  text-transform: none;
+  padding: 0;
+  margin: $base-padding $base-padding*2.5;
+  box-shadow: none;
+  @include sexyUnderline($cButtonBg);
+
+  &:before {
+    @include showIcon($fa-var-chevron-right);
+    position: absolute;
+    margin-left: -$base-padding*1.5;
+    font-size: .6em;
+    line-height: 2.2em;
+    transition: margin-left 200ms;
+  }
+
+  &:hover {
+    background: none;
+    color: $cButtonBgHover;
+    @include sexyUnderline($cButtonBgHover);
+
+    &:before {
+      margin-left: -$base-padding;
+    }
+  }
+}
+
+.btn--full {
+  width: 100%;
+
+   // HAS
+  &.has-icon {
+
+    .icon {
+      float: right;
+      line-height: 1.5rem;
+    }
+  }
+
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SPECIAL BUTTONS
+ * ------------------------------------------------------------------------------ *
+ */
+.btn.is-neutral {
+  background: $cIsNeutral;
+  border-color: darken($cIsNeutral,15%);
+  color: $cBody;
+
+  &:hover {
+    background: $cIsNeutralAccent;
+  }
+
+  // Handle Edgecase
+  &.btn--accent {
+    box-shadow: 0 2px 6px rgba(#000,.1);
+  }
+}
+
+.btn.is-success {
+  background: $cIsSuccess;
+  border-color: darken($cIsSuccess,15%);
+
+  &:hover {
+    background: $cIsSuccessAccent;
+  }
+}
+
+.btn.is-danger {
+  background: $cIsDanger;
+  border-color: darken($cIsDanger,20%);
+
+  &:hover {
+    background: $cIsDangerAccent;
+  }
+}
+
+.btn.is-dark {
+  background: $cIsDark;
+  border-color: darken($cIsDark,15%);
+
+  &:hover {
+    background: $cIsDarkAccent;
+  }
+}
+
+.btn--github,
+.btn--bitbucket {
+  margin-top: 0;
+  font-size: .9rem;
+}
+
+.btn--github:before {
+  @include showIcon($fa-var-github);
+  float: left;
+  font-size: 2em;
+  line-height: 1.5rem;
+}
+
+.btn--bitbucket:before {
+  @include showIcon($fa-var-bitbucket);
+  float: left;
+  font-size: 2em;
+  line-height: 1.5rem;
+}

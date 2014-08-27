@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------------------------ *
+ * PageHeader for the Website
+ *
+ * This Element is used only once on the Website
+ * ------------------------------------------------------------------------------ *
+ */
+
+.pageHeader {
+  width: 100%;
+  display: block;
+  z-index: map-get($mZindex, pageHeader);
+  background: $cPageHeaderBg;
+  position: fixed;
+  top: 0;
+  padding: 5px 0;
+  min-height: 80px;
+
+  .contentWrapper {
+    text-align: right;
+    padding: $base-padding/2 10rem $base-padding/2 0;
+    padding-right: 10rem;
+    position: relative;
+    max-width: 100%;
+  }
+
+  a {
+    color: $cPageHeader;
+    font-size: 1rem;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav__link {
+    padding-top: 0;
+    letter-spacing: 2px;
+  }
+
+  .nav--small {
+    margin-top: 4px;
+  }
+
+  .nav--small .nav__link{
+    padding-bottom: 0;
+    padding-left: 2px;
+    font-size: .8rem;
+    color: #6c7c90;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $_cBlue;
+    }
+  }
+}
+
+.pageHeader__logo {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  padding-top: .5rem;
+  padding-left: 2rem;
+  height: 2.4rem;
+  text-align: left;
+
+  img {
+    height: 2.4rem;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.pageHeader__signup {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-left: $base-padding;
+  height: 100%;
+  width: 9rem;
+
+  .btn {
+    padding: .7em 1em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: $base-padding;
+    transform: translateY(-50%);
+    font-size: .8rem;
+  }
+}
+
+.pageHeader__mobile {
+  @media only screen and (min-width: $bpMedium) {
+    display: none !important;
+  }
+  padding: 1rem !important;
+
+  .btn--mobileMenu {
+    @extend .btn--clean;
+    width: 2rem;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: $_cWhite;
+    border: 1px solid $_cWhite;
+    background: none;
+    margin-top: .5rem;
+
+    &:hover {
+      background: transparent;
+      color: $cPageHeaderBg;
+    }
+
+    &:active,&:focus {
+      background: transparent;
+    }
+  }
+
+  .nav--mobileMenu {
+    width: 100%;
+    clear: both;
+    display: none;
+
+    li {
+      display: block;
+
+      a {
+        padding: .2rem 0;
+      }
+    }
+  }
+}

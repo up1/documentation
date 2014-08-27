@@ -1,32 +1,27 @@
-//* ---------------------------------------------------------------------------- *//
-//* PageHeader
-//* ---------------------------------------------------------------------------- *//
-
 header.pageHeader
-  .contentWrapper
+  .contentWrapper.only-till-sm
     h1.is-hidden Codeship
     figure.pageHeader__logo
-      a href="/pages/landingpage.html"
-        img src="{{ site.baseurl }}/assets/img/logo.png"
-    nav#subNav.nav.nav--small
-      ul
-        li
-          a.nav__link href="/pages/documentation.html" Documentation
-        li
-          a.nav__link href="#" Blog
-        li
-          a.nav__link href="/pages/jobs.html" Jobs
-    nav#mainNav.nav
-      ul
-        li
-          a.nav__link href="/pages/pricing.html" Pricing
-        li
-          a.nav__link href="#" Features
-        li
-          a.nav__link href="/pages/customers.html" Customers
-        li
-          a.nav__link href="#" Team
-    div.pageHeader__signup
-      a.btn.has-icon
-        | Sign in
-        i.icon.icon-user
+      a href="/": img src="{{ site.baseurl }}/assets/img/logo.png" alt="Codeship Logo"
+    nav#subNav.nav.nav--small: ul
+      li: a.nav__link href="https://codeship.io/documentation" Documentation
+      li: a.nav__link href="http://blog.codeship.io" Blog
+      li: a.nav__link href="https://codeship.io/jobs" Jobs
+    nav#mainNav.nav: ul
+      li: a.nav__link href="https://codeship.io/pricing" Pricing
+      li: a.nav__link href="https://codeship.io/features" Features
+      li: a.nav__link href="https://codeship.io/customers" Customers
+      li: a.nav__link href="https://codeship.io/team" Team
+    .pageHeader__signup
+      a#signin.btn.is-success.has-icon href="https://codeship.io/users/sign_up" Sign Up <span class="icon fa fa-user"></span>
+  .contentWrapper.pageHeader__mobile
+    h1.is-hidden Codeship
+    figure.pageHeader__logo
+      a href="/": img src="{{ site.baseurl }}/assets/img/logo.png" alt="Codeship Logo"
+    button.btn.btn--mobileMenu.js-mobileMenu: span.icon.fa.fa-bars
+    nav.nav.nav--mobileMenu: ul
+      li: a.nav__link href="https://codeship.io/pricing" Pricing
+      li: a.nav__link href="https://codeship.io/features" Features
+      li: a.nav__link href="https://codeship.io/customers" Customers
+      li: a.nav__link href="https://codeship.io/team" Team
+      li: a.nav__link href="http://blog.codeship.io" Blog

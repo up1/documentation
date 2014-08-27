@@ -16,6 +16,11 @@ collections:
 slim:
   pretty: true
 
+# SASS
+sass:
+  sass_dir: _sass
+  style: :compressed
+
 # Build settings
 markdown: kramdown
 permalink: pretty

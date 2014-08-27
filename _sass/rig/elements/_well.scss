@@ -1,0 +1,60 @@
+/*
+** ====================================================
+** WELLS
+**
+** Wells are a way of presenting Headlines or important notes
+** in an attention grabbing way
+** ====================================================
+**/
+
+.well {
+  text-align: center;
+  font-size: 1.8em;
+  color: $cWell;
+
+  figure {
+    height: 3em;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 20%;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.3rem;
+
+    @media only screen and (max-width: $bpMedium) {
+      padding: 0;
+    }
+  }
+}
+
+// Paper Wells have a paperlike edge on the top right corner
+.well--paper {
+  background: $cPapernoteBg;
+  color: $cPapernote;
+  padding: 2em 0;
+
+  // Design an Edge
+  &:before {
+    content: "";
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    background: $cBodyBg;
+    right: 0;
+    top: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-left: 1em solid $cPapernoteAlt;
+    border-bottom: 1em solid $cPapernoteAlt;
+  }
+}

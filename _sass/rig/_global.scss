@@ -1,0 +1,469 @@
+/*
+** ====================================================
+** GLOBAL.SCSS
+**
+** Basic Definitions for HTML Elements throught out Framework
+** ====================================================
+*/
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * GENERAL
+ * ------------------------------------------------------------------------------ *
+ */
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  padding: 0 !important;
+
+  font-size: $base-font-size;
+
+  @media (min-width: 1500px) {
+    font-size: $base-font-size*1.1;
+  }
+}
+
+body {
+  font: {
+    family: $fBody;
+    weight: 400;
+    style: normal;
+    size: 1rem; }
+
+  // Better Font Smoothing
+  font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-stroke: 0px;
+  -moz-text-stroke: 0px;
+  -webkit-text-stroke: 0px;
+  letter-spacing: .1em;
+
+  text-align: center;
+  height: 100%;
+  min-height: 100%;
+  color: $cBody;
+  background: $cBodyBg;
+}
+
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Typography
+ * ------------------------------------------------------------------------------ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font: {
+    family: $fHeading;
+    weight: 900; }
+  margin: .8em 0 .6em 0;
+  color: #101b28;
+  letter-spacing: -.01em;
+  line-height: 1.2em;
+}
+
+
+h1, .like-h1 {
+  font-size: 3rem;
+}
+
+h2, .like-h2 {
+  font-size: 2.5rem;
+}
+
+h3, .like-h3 {
+  font-size: 2rem;
+}
+
+h4, .like-h4 {
+  font-size: 1.6rem;
+}
+
+h5, .like-h5 {
+  font-size: 1.4rem;
+}
+
+h6, .like-h6 {
+  font-size: 1.1rem;
+}
+
+a {
+  color: $cAnchor;
+  cursor: pointer;
+  transition: color 100ms, background-image 100ms;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: $base-line-height;
+  letter-spacing: -.004em;
+
+  &:hover {
+    color: $cAnchorHover;
+  }
+
+  &.is-bold {
+    letter-spacing: -.001em;
+  }
+}
+
+.link {
+  @include sexyUnderline($cAnchor);
+  text-shadow: 1px 0 #FFF, 2px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF;
+
+  &:hover {
+    @include sexyUnderline($cAnchorHover);
+  }
+}
+
+p {
+  margin: $base-padding/2 0;
+  font-size: 1.2rem;
+  line-height: $base-line-height;
+  letter-spacing: -.004em;
+
+  a {
+    @extend .link;
+    text-decoration: none;
+    margin: 0 .2em;
+  }
+
+  &.is-bold {
+    letter-spacing: 1px;
+  }
+}
+
+strong {
+  font-weight: 700;
+  color: $_cDarkblue;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: .7em;
+}
+
+div, header, section, nav, article, aside {
+  display: block;
+  box-sizing: border-box;
+}
+
+::selection {
+  text-shadow: none;
+  background: $_cBlue;
+  color: $_cWhite;
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * LISTS
+ * ------------------------------------------------------------------------------ *
+ */
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+
+  li {
+    padding: 0;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    line-height: $base-line-height;
+    letter-spacing: -.004em;
+  }
+}
+
+.ul li::before {
+  @include showIcon($fa-var-caret-right);
+  line-height: 1.5rem;
+  display: inline-block;
+  font-size: .6em;
+  color: $_cDarkblue;
+  position: absolute;
+  transform: translate(-1.5rem,0.2rem);
+}
+
+.ul--check li::before {
+  @include showIcon($fa-var-check);
+}
+
+.ul__title {
+  padding: 0.8em;
+  padding-left: $base-padding*1.5;
+  font-weight: 700;
+  display: block;
+
+  &:before {
+    content: none !important;
+    width: 0 !important;
+  }
+}
+
+.ol {
+  counter-reset: list-counter;
+
+  li:before {
+    position: relative;
+    display: inline-block;
+    counter-increment: list-counter;
+    content: counter(list-counter);
+    width: 1em;
+    margin-left: -$base-padding/2;
+    opacity: .3;
+  }
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * FIGURE and IMG
+ * ------------------------------------------------------------------------------ *
+ */
+
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * CODE and PRE
+ *
+ * PRE blocks will use Prism for Syntax Highlighting
+ * ------------------------------------------------------------------------------ *
+ */
+
+code, pre {
+  background: $cCodeBg;
+  border-radius: $base-border-radius;
+  font: {
+    family: $fCode;
+    size: .8em; }
+}
+
+code {
+  padding: 0 $base-padding/2;
+  display: inline-block;
+  line-height: 2em;
+  margin: 0 $base-padding/2;
+  color: $cCode;
+}
+
+pre {
+  padding: $base-padding $base-padding/2;
+
+  h3 {
+    font-size: .8em;
+    margin: 0;
+  }
+
+  code {
+    padding-top: $base-padding/2;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * BLOCKQUOTE
+ * ------------------------------------------------------------------------------ *
+ */
+
+blockquote {
+  position: relative;
+  border-left: 3px double lighten($cBlockquote, 30%);
+  color: $cBlockquote;
+  font: {
+    family: $fBody;
+    weight: 400;
+    style: italic; }
+  padding: 0 $base-padding;
+  margin: $base-padding 0;
+
+  p {
+    margin: 0;
+  }
+
+  footer {
+    color: lighten($cBlockquote, 15%);
+
+    &::before {
+      @include showIcon($fa-var-minus);
+      font-size: .8em;
+      margin-right: .5em;
+    }
+  }
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * Helper Classes
+ * ------------------------------------------------------------------------------ *
+ */
+
+.is-hidden {
+  font-size: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.ta-left   { text-align: left }
+.ta-right  { text-align: right }
+.ta-center { text-align: center }
+.ta-justify { text-align: justify}
+
+.is-capitalized { text-transform: capitalize; }
+.is-uppercase { text-transform: uppercase; }
+.is-italic { font-style: italic; }
+.is-bold { font-weight: bold; color: $_cDarkblue;}
+
+.has-border-top { border-top: $vBorder;}
+.has-border-right { border-right: $vBorder;}
+.has-border-bottom { border-bottom: $vBorder;}
+.has-border-left { border-left: $vBorder;}
+
+.clr { zoom:1 /* For IE 6/7 (trigger hasLayout) */ }
+
+.clr:before,
+.clr:after {
+  content:"";
+  display:table;
+}
+
+.clr:after { clear:both }
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * INPUTS
+ * ------------------------------------------------------------------------------ *
+ */
+
+input:focus, button:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SITEWIDE ELEMENT-CLASSES
+ * ------------------------------------------------------------------------------ *
+ */
+
+ @media only screen and (min-width: $bpLarge) {
+   // For Large Columns
+  .only-lg {
+    display: inherit;
+  }
+
+  .hidden-on-lg {
+    display: none !important;
+  }
+
+  .only-md,
+  .only-sm,
+  .only-xs {
+    display: none !important;
+  }
+ }
+
+ @media only screen and (min-width: $bpMedium) and (max-width: $bpLarge) {
+   // For Medium Screens
+  .only-till-md {
+    display: none !important;
+  }
+
+  .hidden-on-md {
+    display: none !important;
+  }
+
+  .only-md {
+    display: inherit;
+  }
+
+  .only-lg,
+  .only-sm,
+  .only-xs {
+    display: none !important;
+  }
+ }
+
+ @media only screen and (min-width: $bpSmall) and (max-width: $bpMedium) {
+  // For Smaller Screens
+  .only-till-md,
+  .only-till-sm {
+    display: none !important;
+  }
+
+  .hidden-on-sm {
+    display: none !important;
+  }
+
+  .only-sm {
+    display: inherit;
+  }
+
+  .only-lg,
+  .only-md,
+  .only-xs {
+    display: none !important;
+  }
+ }
+
+ @media only screen and (max-width: $bpSmall) {
+   // For Smaller Screens
+  .only-till-md,
+  .only-till-sm,
+  .only-till-xs {
+    display: none !important;
+  }
+
+  .hidden-on-xs {
+    display: none !important;
+  }
+
+  .only-xs {
+    display: inherit;
+  }
+
+  .only-lg,
+  .only-md,
+  .only-sm {
+    display: none !important;
+  }
+ }
+
+.contentWrapper {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  max-width: $bpLarge+10rem;
+  text-align: left;
+  padding: 0 $base-padding;
+
+  @media only screen and (max-width: $bpMedium) {
+    margin: 0;
+    padding: 0;
+  }
+}

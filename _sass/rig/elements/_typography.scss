@@ -1,0 +1,27 @@
+/*
+** ====================================================
+** TYPOGRAPHY
+**
+** Basic classes for various typographical Effects
+** ====================================================
+**/
+
+// Shows a smaller span wrapped text above the actual title
+.is-prefixed-title {
+
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $_cGreen;
+    display: block;
+    text-transform: none;
+  }
+
+}
+
+// Makes the text italic and grey
+.annotation {
+  font-style: italic;
+  color: #8B9EB0;
+  font-size: 1rem;
+}

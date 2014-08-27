@@ -1,0 +1,33 @@
+.searchBlock {
+  background-image: url(../img/header-pics/header.jpg);
+  background-size: cover;
+  background-position-x: center;
+  display: block;
+  margin-top: 80px;
+  padding: 4rem 0;
+  text-align: center;
+
+  h2 {
+    color: $_cWhite;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.searchBlock__form {
+  display: inline-block;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.label--search {
+  &::before {
+    @include showIcon($fa-var-search);
+    position: absolute;
+    line-height: 4rem;
+    left: 1rem;
+  }
+
+  input[type="search"] {
+    padding-left: 2rem;
+  }
+}

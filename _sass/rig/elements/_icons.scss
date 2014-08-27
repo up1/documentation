@@ -1,0 +1,17 @@
+ /*
+** ====================================================
+** ICONS
+**
+** For backwards compatibility and the ease of usage till
+** SVG Spritesheets become better to use we provide FontAwesome
+** ====================================================
+**/
+
+// FontAwesome Classes are automatically prefixed with .icon instead of .fa
+// Automatically they get set on the same size for better useage
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}

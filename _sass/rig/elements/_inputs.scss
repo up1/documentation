@@ -1,0 +1,252 @@
+/*
+** ====================================================
+** INPUTS
+**
+** Of course we need to handle various Inputs and Form Elements
+** ====================================================
+**/
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * LABELS
+ * ------------------------------------------------------------------------------ *
+ */
+
+.label {
+  position: relative;
+  display: block;
+  margin-bottom: 1em;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.label__title {
+  position: absolute;
+  top: $base-padding*1.4;
+  left: $base-padding*1.4;
+  color: $cBody;
+  text-transform: capitalize;
+  transition: all 200ms;
+}
+
+// Special Classes for Labels
+.label.has-focus .label__title,
+.label.has-content .label__title,
+[data-watch="select"] .label__title {
+  top: 2px;
+  left: 26px;
+  color: $cLabel;
+  font-size: .8em;
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * INPUTS
+ * ------------------------------------------------------------------------------ *
+ */
+
+#{$all-text-inputs},
+select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $cInputBorder;
+  background: $cInputBg;
+  padding: $base-padding*1.5;
+  font-size: .9em;
+  color: darken($cInput, 10%);
+  transition: background 200ms, border 200ms;
+  // text-shadow: 1px 0 #FFF ,2px 2px #FFF;
+  border-radius: $base-border-radius;
+
+  &:focus {
+    background: $cInputBgFocus;
+    border: 1px solid $cInputBorder;
+  }
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SELECT
+ * ------------------------------------------------------------------------------ *
+ */
+
+[data-watch="select"]:after {
+  @include showIcon($fa-var-chevron-down);
+  position: absolute;
+  background: $cButtonBg;
+  border-radius: .2em;
+  box-shadow: $vBoxshadow;
+  border-bottom: 3px solid darken($cButtonBg, $vDarken);
+  width: 1.2em;
+  height: 1.2em;
+  top: $base-padding*1.2;
+  right: $base-padding;
+  color: $cButton;
+  padding: $base-padding/2;
+  padding-bottom: $base-padding/4;
+  text-align: center;
+  font-size: .8em;
+  pointer-events: none; // For not being clickable
+}
+
+select {
+  @include appearance();
+  height: $base-padding * 4.4;
+  cursor: pointer;
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * CHECKBOX
+ * ------------------------------------------------------------------------------ *
+ */
+
+.checkbox {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2em;
+  margin: 1em 0;
+
+  input {
+    visibility: none;
+
+    + span {
+      padding-left: $base-padding*2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: $cInputBg;
+        border-radius: .2em;
+        left: 0;
+        width: 2em;
+        height: 2em;
+        border: 1px solid $cInputBorder;
+      }
+
+      &::after {
+        @include showIcon($fa-var-check);
+        color: $cInput;
+        opacity: .2;
+        position: absolute;
+        left: .6em;
+        top: .5em;
+        transition: color 200ms, opacity 200ms;
+      }
+    }
+  }
+
+  input:checked + span::after{
+    color: $cButtonBg;
+    opacity: 1;
+  }
+}
+
+// Animated Switch for showing on/off state in a different Manner
+.checkboxSwitch {
+  padding: $base-padding 0;
+  padding-right: 10rem;
+  position: relative;
+  vertical-align: middle;
+  display: block;
+  vertical-align: middle;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 3rem;
+    background: $cInputBg;
+    border: 1px solid $cInputBorder;
+    border-radius: .2em;
+    right: 0;
+    top: 0;
+  }
+
+  input {
+    visibility: hidden;
+    position: absolute;
+  }
+
+
+  input + .checkboxSwitch__indicator {
+    right: 3.4rem;
+    background: $cInputBorder;
+    border-color: darken($cInputBorder, $vDarken);
+  }
+
+  input:checked + .checkboxSwitch__indicator {
+    right: .2rem;
+    background: $cButtonBg;
+    border-color: darken($cButtonBg, $vDarken);
+  }
+}
+
+.checkboxSwitch__indicator {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 2.6rem;
+  height: 2.7rem;
+  position: absolute;
+  background: $cInputBorder;
+  top: .2rem;
+  pointer-events: none;
+  border-radius: .2em;
+  // border-bottom: 3px solid darken($cInputBorder, 15%);
+  transition: right 200ms, background 200ms, border-color 200ms;
+}
+
+/*
+ * ------------------------------------------------------------------------------ *
+ * SWITCH
+ *
+ * Switches give you a nice way of putting a radiogroup in a nice form
+ * ------------------------------------------------------------------------------ *
+ */
+
+
+.switch {
+  display: inline-block;
+  border: 1px solid $cInputBorder;
+  border-radius: .2em;
+}
+
+.switch__label {
+  display: inline-block;
+
+  &:first-of-type span{
+    border-radius: .2em 0 0 .2em;
+  }
+
+  &:last-of-type span {
+    border-radius: 0 .2em .2em 0;
+  }
+
+  input {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  span {
+    display: inline-block;
+    padding: $base-padding;
+    background: $cInputBg;
+    color: rgba($cInput, .4);
+    text-shadow: 1px 0 #FFF ,2px 2px #FFF;
+    transition: color 100ms, background 200ms, text-shadow 100ms;
+    text-align: center;
+    min-width: 4em;
+    cursor: pointer;
+  }
+
+  input:checked + span {
+    background: $cButtonBg;
+    color: $cButton;
+    text-shadow: 1px 0 rgba(#000, .5) ,1px 2px rgba(#000, .5);
+    cursor: disabled;
+  }
+}

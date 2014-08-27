@@ -1,0 +1,36 @@
+.table {
+  width: 100%;
+  border: 1px solid $_cGrey;
+  border-collapse: collapse;
+  color: $_cDarkblue;
+
+  thead{
+    background: lighten($_cGrey,5%);
+  }
+
+  thead + tbody {
+    border-top: 1rem solid transparent;
+    border-collapse: collapse;
+  }
+
+  td,th {
+    padding: .5rem .2rem;
+
+    &:first-child {padding-left: 1.5rem;}
+    &:last-child {padding-right: 1.5rem;}
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  &.table--striped {
+    tbody tr{
+      &:nth-child(even) {
+        background: lighten($_cGrey,5%);
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,27 @@
+/*
+** ====================================================
+** TAGS
+**
+** Tags help you to show a commom topic between various content elements
+** ====================================================
+**/
+
+.tags {
+  display: block;
+}
+
+.tags > .tag {
+  background: $cTagBg;
+  color: $cTag;
+  border-radius: $base-border-radius;
+  margin: 0 $base-padding/3 $base-padding/3 0;
+  padding: 0 $base-padding/3;
+  line-height: 1.6em;
+  font-size: .9rem;
+  display: inline-block;
+  letter-spacing: 0;
+
+  &:before {
+    content: "#"; // Hashtags FTW
+  }
+}

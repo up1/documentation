@@ -1,0 +1,35 @@
+.pageFooter {
+  background: $cFooterBg;
+  color: $cFooter;
+  font-size: .8em;
+  padding: 1em 0;
+  position: relative;
+  margin-top: 4rem;
+  z-index: 1;
+
+  .nav {
+    a { color: $cFooter;
+      font-size: .7em;}
+  }
+
+  img {
+    max-height: 3rem;
+  }
+}
+
+.copyright {
+  p {
+    font-size: .9rem;
+  }
+}
+
+.specialSiteLinks a {
+  font-size: .9rem;
+  margin-left: .5rem
+}
+
+.scriptIncludes {
+  img {
+    position: absolute;
+  }
+}
