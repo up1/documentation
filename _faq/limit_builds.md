@@ -4,7 +4,6 @@ layout: page
 tags:
   - faq
   - builds
-category: FAQ
 ---
 We build all branches you push to your repository. In our opinion every push to your repository should be tested.
 
