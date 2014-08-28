@@ -7,6 +7,8 @@ gems:
 exclude:
   - Readme.md
   - Guardfile
+  - Gemfile
+  - Gemfile.lock
 collections:
   faq:
     permalink: /faq/:title/
