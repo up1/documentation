@@ -1,5 +1,6 @@
 # Site settings
 baseurl: /documentation
+permalink: /:categories/:title/
 
 # Jekyll
 gems:
@@ -25,4 +26,3 @@ sass:
 
 # Build settings
 markdown: kramdown
-permalink: pretty

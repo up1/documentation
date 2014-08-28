@@ -4,7 +4,8 @@ layout: page
 tags:
   - databases
   - postgresql
-category: Services
+categories:
+  - databases
 ---
 The default databases created for you are **development** and **test**.
 
