@@ -5,7 +5,7 @@
 Clone the repository, install needed gems and run Jekyll ;)
 
 ```bash
-git clone git@github.com:mlocher/documentation.git
+git clone git@github.com:codeship/documentation.git
 cd documentation
 bundle install
 bundle exec guard
