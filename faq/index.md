@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked questions
+title: Frequently Asked Questions
 layout: page
 ---
 {% for q in site.faq %}
