@@ -5,3 +5,5 @@ _site
 
 # OS X specific
 .DS_Store
+
+*.codekit
