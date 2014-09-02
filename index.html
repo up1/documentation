@@ -7,7 +7,7 @@ bodyclass: is-blue
 {% include search.html %}
 
 <div class="contentWrapper">
-  <div class="grid">
+  <div class="grid grid--boxContainer">
     {% for category in site.categories %}
     <div class="colxs100 colsm50 colmd33 collg33">
       <div class="box">
@@ -24,5 +24,14 @@ bodyclass: is-blue
       </div>
     </div>
     {% endfor %}
+
+    <div class="row">
+      <div class="colxs100 ta-center">
+        <p class="reportIssue">
+          Report Issue <br>
+          <a href="mailto:support@codeship.com">support@codeship.com</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

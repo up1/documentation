@@ -2,6 +2,10 @@ body.is-blue {
   background: #f1f5fa;
 }
 
+.grid--boxContainer {
+  padding-top: 4rem;
+}
+
 // *******************************************************
 // META CONTENT
 // *******************************************************
@@ -120,6 +124,7 @@ body.is-blue {
   box-shadow: $vBoxshadow;
   padding: 0 2rem 1rem;
   border-radius: .2rem;
+  margin: 1rem 0;
 
   .box__title {
     margin: 0;
