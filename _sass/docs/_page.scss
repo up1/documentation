@@ -1,3 +1,11 @@
+body.is-blue {
+  background: #f1f5fa;
+}
+
+// *******************************************************
+// META CONTENT
+// *******************************************************
+
 .contentWrapper.has-meta {
   max-width: $bpLarge;
   padding: 0 10rem;
@@ -50,6 +58,10 @@
   }
 }
 
+// *******************************************************
+// TAGS
+// *******************************************************
+
 .tagList {
   margin: 0;
 
@@ -71,6 +83,10 @@
     color: $_cWhite;
   }
 }
+
+// *******************************************************
+// BREADCRUMBS
+// *******************************************************
 
 .breadcrumbs {
   a {
@@ -95,6 +111,47 @@
   }
 }
 
+// *******************************************************
+// BOX
+// *******************************************************
+
+.box {
+  background: $_cWhite;
+  box-shadow: $vBoxshadow;
+  padding: 0 2rem 1rem;
+  border-radius: .2rem;
+
+  .box__title {
+    margin: 0;
+    color: #000;
+    @extend .like-h5;
+    padding: 1rem 0;
+    border-bottom: $vBorder;
+  }
+
+  .box__footer {
+    padding: 1rem 0;
+    border-top: $vBorder;
+
+    a {
+      text-transform: uppercase;
+      font-size: .9rem;
+    }
+  }
+
+  .box__counter {
+    float: right;
+    display: inline-block;
+    color: rgba(#000,.2);
+    font-weight: 200;
+    letter-spacing: 0;
+  }
+}
+
+// *******************************************************
+// VARIOUS
+// *******************************************************
+
 .pageTitle {
   margin-top: 0;
 }
@@ -115,4 +172,3 @@
     color: $cAnchor;
   }
 }
-
