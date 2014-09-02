@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include search.html %}
+
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="colxs100">
+      <h2>{{ page.title }}</h2>
+
+      <ul>
+      {% for tagged_page in site.tags[page.tag] %}
+        <li><a class="tag" href="{{ site.baseurl }}{{ tagged_page.url }}">#{{ tagged_page.title }}</a></li>
+      {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div>
