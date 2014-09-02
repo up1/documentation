@@ -2,6 +2,7 @@
 title: PostgreSQL
 layout: page
 tags:
+  - services
   - databases
   - postgresql
 categories:
