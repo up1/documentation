@@ -1,14 +1,15 @@
-{% assign crumbs = page.url | split: '/' %}
+{% assign crumbs = page.url | remove: "/index.html" %}
+{% assign crumbs = crumbs | split: '/' %}
 {% assign previous = "" %}
 <div class="breadcrumbs">
-  {% for part in crumbs  %}
-    {% unless part == "index.html" %}
-      {% if part == "" %}
-        <a href="{{ site.baseurl }}/">Documentation</a>
-      {% else %}
-        {% capture previous %}{{ previous }}/{{ part }}{% endcapture %}
-        <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize }}</a>
-      {% endif %}
-    {% endunless %}
+  {% for part in crumbs %}
+    {% case part %}
+    {% when crumbs.last %}
+    {% when "" %}
+      <a href="{{ site.baseurl }}/">Documentation</a>
+    {% else %}
+      {% capture previous %}{{ previous }}/{{ part }}{% endcapture %}
+      <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize | remove: '.html'  }}</a>
+    {% endcase %}
   {% endfor %}
 </div>
