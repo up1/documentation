@@ -3,8 +3,6 @@ baseurl: /documentation
 permalink: /:categories/:title/
 
 # Jekyll
-gems:
-  - jekyll-slim
 exclude:
   - Readme.md
   - Guardfile
@@ -14,10 +12,6 @@ collections:
   faq:
     permalink: /faq/:title/
     output: true
-
-# Slim
-slim:
-  pretty: true
 
 # SASS
 sass:
