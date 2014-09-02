@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% include head.slim %}
+</head>
+<body class="{{page.bodyclass}}">
+  {% include header.slim %}
+  {{ content }}
+  {% include footer.slim %}
+</body>
+</html>
