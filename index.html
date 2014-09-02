@@ -1,0 +1,14 @@
+---
+layout: page
+title: Documentation
+---
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus tellus non sapien auctor egestas. Quisque euismod ligula fringilla ligula finibus, nec malesuada velit maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sit amet auctor neque, sit amet rutrum nunc. Ut ut augue mattis, pulvinar eros a, pulvinar nisl. Morbi at tortor ac diam porta euismod. Nunc ultrices massa odio, et euismod ligula vestibulum eu. Integer hendrerit felis id pulvinar porta. Pellentesque porttitor diam ornare, sodales arcu vitae, rutrum quam. Morbi ex nisl, luctus sit amet lobortis in, sollicitudin eget libero.</p>
+
+{% for category in site.categories %}
+<h2>{{ category.first }}</h2>
+{% for page in site.categories[category.first] %}
+<ul>
+  <li><a class="tag">#{{ page.title | downcase }}</a></li>
+</ul>
+{% endfor %}
+{% endfor %}
