@@ -8,11 +8,8 @@ layout: default
   | {% include meta.html tags=page.tags %}
 
   .grid: .colxs100
-    .breadcrumbs
-      a href="#" Documentation
-      a href="#" Continuous Integration
-      a href="#" SSH Access
-
+    | {% include breadcrumbs.html  %}
+    
     h2.pageTitle
       | {{ page.title }}
 

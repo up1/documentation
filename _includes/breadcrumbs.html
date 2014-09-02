@@ -1,0 +1,12 @@
+{% assign crumbs = page.url | split: '/' %}
+{% assign previous = "" %}
+<div class="breadcrumbs">
+  {% for part in crumbs  %}
+    {% if part == "" %}
+      <a href="{{ site.baseurl }}/">Documentation</a>
+    {% else %}
+      {% capture previous %}{{ previous }}/{{ part }}{% endcapture %}
+      <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
