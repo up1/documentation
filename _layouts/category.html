@@ -7,9 +7,7 @@ layout: page
 {% endif %}
 
 <ul class="ul ul--columnized">
-  {% for page in site.categories[page.category] %}
-    <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title | capitalize }}</a></li>
+  {% for category_page in site.categories[page.category] %}
+    <li><a href="{{ site.baseurl }}{{ category_page.url }}">{{ category_page.title }}</a></li>
   {% endfor %}
 </ul>
-
-{% include newsletter.html %}
