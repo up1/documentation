@@ -11,6 +11,8 @@ bundle install
 bundle exec guard
 ```
 
+You can then access the site at http://localhost:4000
+
 On a server system, you would exclude the _:development_ & _:test_ groups, but include the _deployment_ flag.
 
 ```bash
@@ -26,12 +28,3 @@ bundle update
 git add Gemfile Gemfile.lock
 git commit
 ```
-
-## Working On
-
-Main focus point right now are _Category_ and _Tag_ pages. A bunch of "interesting" pages is listed below:
-
-* http://localhost:4000/documentation/databases/postgresql/
-* http://localhost:4000/documentation/queues/redis/
-* http://localhost:4000/documentation/services/elasticsearch/
-* http://localhost:4000/documentation/faq/
