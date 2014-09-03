@@ -14,6 +14,7 @@ $ ->
       @_watchInputs $('[data-watch="textarea"]'), 'textarea' if $('[data-watch="textarea"]').length > 0
       @_calculateFooterHeight()
       @_setTitleImage()
+      @_handleMobileMenu()
 
     _calculateFooterHeight: ->
       targetHeight = $('.widgetArea').outerHeight()
@@ -43,6 +44,15 @@ $ ->
 
         # always remove class 'has-focus' when leaving
         $(this).parent().removeClass 'has-focus'
+
+    _handleMobileMenu: ->
+      $('.js-mobileMenu').on "click", (e) ->
+        e.preventDefault()
+        $menu = $('.nav--mobileMenu')
+        if $menu.hasClass('is-visible')
+          $menu.removeClass('is-visible').velocity "slideUp", {duration: 200}
+        else
+          $menu.addClass('is-visible').velocity "slideDown", {duration: 200}
 
 
   new Ui.Watcher
