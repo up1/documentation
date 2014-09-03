@@ -1,0 +1,104 @@
+.swiftype-widget {
+
+  .autocomplete {
+    transform: translateY(5px);
+
+    ul {
+      li.active {
+        background: $_cBlue;
+        background-color: $_cBlue;
+      }
+    }
+  }
+}
+
+
+#st-main-container {
+  max-width: 800px;
+
+  a.close {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: $_cBlue;
+    opacity: 1;
+    top: 1rem;
+    right: 30px;
+  }
+
+  .st-search-bar {
+    padding: 3rem 0;
+    height: 9rem;
+    background: #f3f6fb;
+
+    form {
+      display: block;
+      height: 100%;
+      padding: 0 30px;
+    }
+
+    .st-input-wrapper {
+      height: 100%;
+      max-width: inherit;
+      padding: 0;
+      margin: 0;
+
+      .st-input-inner {
+        padding: 0 40px;
+        height: 100%;
+
+        .st-input-icon {
+          height: 3rem;
+        }
+      }
+    }
+
+    input[type="text"] {
+      height: 3rem;
+      margin: 0;
+    }
+
+    input[type="submit"] {
+      display: none;
+    }
+  }
+
+  .st-result-wrapper {
+    .st-result-listing {
+      margin-left: auto;
+      padding-bottom: 20px;
+    }
+
+    .st-search-summary {
+      text-align: left;
+    }
+
+    .st-result-text {
+      padding: .5rem 0;
+
+      h3 {
+        text-align: left;
+        a {
+          font-family: "Lato";
+          font-size: 1.2rem;
+          text-decoration: none;
+        }
+      }
+
+      .st-snippet {
+        font-family: 'Bariol';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        line-height: 1.3em;
+      }
+    }
+
+    .st-next,.st-prev {
+      @extend .btn;
+      @extend .btn--clean;
+      padding: .3rem;
+      width: 150px;
+    }
+  }
+}
