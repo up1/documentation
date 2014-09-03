@@ -1,13 +1,14 @@
 ---
 layout: page
 ---
+{% assign category_pages = site.categories[page.category] | sort: 'title' %}
 
 {% if site.data.categories[page.category].introduction %}
 {{ site.data.categories[page.category].introduction | markdownify }}
 {% endif %}
 
 <ul class="ul ul--columnized">
-  {% for category_page in site.categories[page.category] %}
-    <li><a href="{{ site.baseurl }}{{ category_page.url }}">{{ category_page.title }}</a></li>
+  {% for content_page in category_pages %}
+    <li><a href="{{ site.baseurl }}{{ content_page.url }}">{{ content_page.title }}</a></li>
   {% endfor %}
 </ul>

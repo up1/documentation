@@ -2,6 +2,16 @@
 baseurl: /documentation
 permalink: /:categories/:title/
 
+# Defaults for posts
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: page
+      weight: 50
+
 # Jekyll
 exclude:
   - Readme.md
