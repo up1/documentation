@@ -1,13 +1,14 @@
 ---
 layout: page
 ---
+{% assign tag_pages = site.tags[page.tag] | sort: 'title' %}
 
 {% if site.data.tags[page.tags].introduction %}
 {{ site.data.tags[page.tags].introduction | markdownify }}
 {% endif %}
 
 <ul class="ul ul--columnized">
-  {% for tagged_page in site.tags[page.tag] %}
-    <li><a href="{{ site.baseurl }}{{ tagged_page.url }}">{{ tagged_page.title }}</a></li>
+  {% for content_page in tag_pages %}
+    <li><a href="{{ site.baseurl }}{{ content_page.url }}">{{ content_page.title }}</a></li>
   {% endfor %}
 </ul>
