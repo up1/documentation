@@ -1,0 +1,9 @@
+<!-- configure some basic information for mixpanel -->
+<script>
+  mixpanel.register_once({ 'First Landed Page': document.URL });
+  mixpanel.people.set_once({
+      "First Seen": new Date().toUTCString(),
+      "First Landed Page": document.URL
+  });
+  mixpanel.track("documentation page viewed", {'title': document.title});
+</script>
