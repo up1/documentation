@@ -30,3 +30,11 @@ sass:
 
 # Build settings
 markdown: kramdown
+
+# Kramdown
+kramdown:
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers:      table
+    coderay_css:               class

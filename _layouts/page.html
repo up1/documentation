@@ -7,11 +7,17 @@ layout: default
 <div class="contentWrapper has-meta">
   {% include meta.html tags=page.tags %}
   <div class="grid">
-    <div class="colxs100">
+    <div class="colxs100 pageContent">
 
       {% include breadcrumbs.html %}
 
       <h2 class="pageTitle">{{ page.title | capitalize }}</h2>
+      {% if page.tags %}
+      <div class="hidden-on-md hidden-on-lg onPageTags">
+        {% for tag in page.tags %}<a class="tag" href="{{ site.baseurl }}/tags/{{ tag | downcase }}/">#{{ tag | downcase }}</a>{% endfor %}
+      </div>
+      {% endif %}
+
       {{ content }}
     </div>
   </div>
