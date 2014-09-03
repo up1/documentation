@@ -256,11 +256,13 @@ code, pre {
 }
 
 code {
-  padding: 0 $base-padding/2;
+  padding: 0 5px;
   display: inline-block;
   line-height: 2em;
-  margin: 0 $base-padding/2;
-  color: $cCode;
+  margin: 0 0px;
+  font-size: 0.8rem;
+  color: #FFF;
+  transform: translateY(-1px);
 }
 
 pre {

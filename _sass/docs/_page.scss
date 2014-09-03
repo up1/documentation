@@ -16,6 +16,27 @@ body.is-blue {
   position: relative;
 }
 
+@media (max-width: 900px) {
+  .contentWrapper.has-meta {
+    padding: 0 8rem;
+  }
+
+  .meta__left,
+  .meta__right {
+    width: 8rem;
+  }
+}
+
+@media (max-width: $bpMedium) {
+  .contentWrapper.has-meta {
+    padding: 0;
+  }
+
+  .meta {
+    display: none;
+  }
+}
+
 .meta {
   position: absolute;
   top: 0;
@@ -29,6 +50,8 @@ body.is-blue {
   position: absolute;
   left: 0;
   margin-top: 2rem;
+  box-sizing: border-box;
+  padding: 0 5px;
 }
 
 .meta__right {
@@ -38,6 +61,7 @@ body.is-blue {
 
 .meta__backLink {
   display: block;
+  position: relative;
   padding-left: 2.5rem;
   line-height: 1rem;
   font-size: .8rem;
@@ -161,8 +185,10 @@ body.is-blue {
   margin-top: 0;
 }
 
-.contentLink {
+.pageContent h2 a {
   position: relative;
+  @extend .like-h4;
+  color: $_cDarkblue;
 
   &:focus {
     outline: none;
@@ -172,9 +198,37 @@ body.is-blue {
     @include showIcon($fa-var-link);
     position: absolute;
     top: 0;
+    display: inline-block;
+    font-weight: 400;
+    width: 2rem;
     left: -2rem;
     line-height: 2.5rem;
+    font-size: 1.1rem;
     color: $cAnchor;
+  }
+}
+
+.pageContent {
+
+  ul {
+    @extend .ul;
+  }
+
+  ol {
+    @extend .ol;
+  }
+
+  > div {
+    overflow-x: scroll;
+  }
+
+  .tag {
+    margin-right: .5rem;
+  }
+
+  .onPageTags {
+    transform: translateY(-2rem);
+    margin-bottom: 2rem;
   }
 }
 
@@ -192,6 +246,10 @@ body.is-blue {
     }
   }
 }
+
+// *******************************************************
+// Newsletter Subscribe
+// *******************************************************
 
 .newsletterSubscribe {
   background-image: url(../img/newsletterbox.jpg);
@@ -251,3 +309,5 @@ body.is-blue {
 
   }
 }
+
+
