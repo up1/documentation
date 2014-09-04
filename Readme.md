@@ -1,4 +1,7 @@
 # Codeship Documentation
+
+[ ![Codeship Status for codeship/documentation](https://codeship.io/projects/59a737f0-1648-0132-c4e7-72c6c37b1f6e/status)](https://codeship.io/projects/33837)
+
 ## Setup & Updates
 ### Building (locally)
 
