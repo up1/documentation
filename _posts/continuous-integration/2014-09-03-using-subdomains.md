@@ -4,7 +4,7 @@ tags:
   - subdomains
   - testing
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 If you want to use Subdomains you can use a Wildcard DNS service like xip.io
 

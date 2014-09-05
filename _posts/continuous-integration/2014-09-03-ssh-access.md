@@ -6,7 +6,7 @@ tags:
   - key
   - debug
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 You are able to activate build debugging at the bottom of the build detail view. (It only works for branches still available in your repository)
 

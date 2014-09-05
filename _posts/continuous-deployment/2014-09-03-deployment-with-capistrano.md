@@ -5,7 +5,7 @@ tags:
   - deployment
   - capistrano
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 You can deploy any kind of Application with capistrano.
 It's most commonly used in the Ruby on Rails community.

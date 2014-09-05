@@ -4,7 +4,7 @@ layout: page
 tags:
   - deployment
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Everytime a build runs for this branch, it kicks off your deployment pipeline.
 

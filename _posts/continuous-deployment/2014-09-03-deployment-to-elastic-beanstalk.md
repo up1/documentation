@@ -5,7 +5,7 @@ tags:
   - deployment
   - elastic beanstalk
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 ## [Prerequisites](#prerequisites){:name="prerequisites"}
 

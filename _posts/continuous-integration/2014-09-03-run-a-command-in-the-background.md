@@ -4,7 +4,7 @@ tags:
   - testing
   - faq
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 Sometimes you might want to run a server or another process in the background. You can use the following template to run any of your commands as a background process
 

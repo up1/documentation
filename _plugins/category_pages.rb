@@ -10,7 +10,6 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category.html')
       self.data['category'] = category
-      self.data['title'] = "#{category.capitalize}"
     end
   end
 
