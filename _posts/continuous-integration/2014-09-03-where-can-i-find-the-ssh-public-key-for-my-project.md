@@ -5,7 +5,7 @@ tags:
   - ssh key
   - faq
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 Open the project navigation on top of the page. Click on the settings icon next to the respective project.
 
