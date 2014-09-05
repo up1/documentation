@@ -4,23 +4,24 @@ module Jekyll
     #
     # input - the object, something from site.data
     # property - property within each object to filter by
-    # nils ('first' | 'last') - nils appear before or after non-nil values
+    # nils ('first' | 'last') - prepend / append if the property is nil
     #
     # Returns the filtered array of objects
-    def sort_data(input, property = nil, nils = "first")
+    def sort_by_data_value(input, property = nil, nils = "first")
       if property.nil?
         input.sort
       else
         case
         when nils == "first"
-          order = + 1
-        when nils == "last"
           order = - 1
+        when nils == "last"
+          order = + 1
         else
           raise ArgumentError.new("Invalid nils order: " +
             "'#{nils}' is not a valid nils order. It must be 'first' or 'last'.")
         end
 
+        # sorts two properties according to their value
         input.sort { |apple, orange|
           apple_property = data_item_property(apple, property)
           orange_property = data_item_property(orange, property)

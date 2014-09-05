@@ -3,7 +3,7 @@ layout: default
 title: Documentation
 bodyclass: is-blue
 ---
-{% assign categories = site.data.categories | sort_data: 'weight', 'last' %}
+{% assign categories = site.data.categories | sort_by_data_value: 'weight' %}
 
 {% include search.html %}
 
