@@ -18,6 +18,8 @@ exclude:
   - Guardfile
   - Gemfile
   - Gemfile.lock
+gems:
+  - octopress-autoprefixer
 collections:
   faq:
     permalink: /faq/:title/
