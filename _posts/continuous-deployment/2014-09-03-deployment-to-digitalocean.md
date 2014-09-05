@@ -5,7 +5,7 @@ tags:
   - deployment
   - digital ocean
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 ## [Different Ways to deploy](#different-ways){:name="different-ways"}
 DigitalOcean offers virtual servers (called Droplets).

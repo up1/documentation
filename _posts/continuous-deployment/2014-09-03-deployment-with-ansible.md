@@ -6,7 +6,7 @@ tags:
   - deployment
   - ansible
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 Ansible is fully supported on the Codeship.
 

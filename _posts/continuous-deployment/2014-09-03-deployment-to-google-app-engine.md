@@ -5,7 +5,7 @@ tags:
   - deployment
   - google app engine
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 You can deploy your <%= docs_link_to "Java", "/languages-and-frameworks/java-and-jvm-based-languages/" %>,
 <%= docs_link_to "Go", "/languages-and-frameworks/go/" %>
