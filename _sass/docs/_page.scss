@@ -209,26 +209,24 @@ body.is-blue {
   margin-top: 0;
 }
 
-.pageContent h2 a {
-  position: relative;
-  @extend .like-h4;
-  color: $_cDarkblue;
 
-  &:focus {
-    outline: none;
-  }
+.pageContent {
+  h2{ @extend .like-h4;}
+  h3{ @extend .like-h5;}
+  h4{ @extend .like-h6;}
 
-  &:hover::before {
-    @include showIcon($fa-var-link);
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    font-weight: 400;
-    width: 2rem;
-    left: -2rem;
-    line-height: 2.5rem;
-    font-size: 1.1rem;
-    color: $cAnchor;
+  h2 {
+    a {
+      display: none;
+      color: $cAnchor;
+      @extend .like-h4;
+      padding: 0 .5rem;
+      line-height: 1;
+    }
+
+    &:hover a {
+      display: inline-block;
+    }
   }
 }
 
