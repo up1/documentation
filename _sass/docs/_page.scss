@@ -168,12 +168,36 @@ body.is-blue {
     }
   }
 
+  .box__links {
+    min-height: 7em;
+  }
+
   .box__counter {
     float: right;
     display: inline-block;
     color: rgba(#000,.2);
     font-weight: 200;
     letter-spacing: 0;
+  }
+}
+
+.grid--boxContainer {
+  display: block;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vw;
+}
+
+@supports not (flex-wrap: wrap) {
+  .grid--boxContainer {
+    display: block;
+    > div {
+      vertical-align: top;
+    }
   }
 }
 
