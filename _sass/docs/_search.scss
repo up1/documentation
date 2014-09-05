@@ -1,4 +1,5 @@
 .searchBlock {
+  position: relative;
   background-image: url(../img/header-pics/header.jpg);
   background-size: cover;
   background-position-x: center;
@@ -30,5 +31,6 @@
 
   input[type="search"] {
     padding-left: 2rem;
+    -webkit-appearance: none; // Because otherwise Safari ignores css values regarding height
   }
 }

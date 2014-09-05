@@ -4,7 +4,7 @@ tags:
   - git
   - submodules
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 Git Submodules are initialized automatically. This will be triggered by the existence of the `.gitmodules` file in your project root.
 

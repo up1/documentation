@@ -9,7 +9,11 @@
       <a href="{{ site.baseurl }}/">Documentation</a>
     {% else %}
       {% capture previous %}{{ previous }}/{{ part }}{% endcapture %}
-      <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize | remove: '.html'  }}</a>
+      {% if site.data.categories[part].title %}
+        <a href="{{ site.baseurl }}{{ previous }}/">{{ site.data.categories[part].title }}</a>
+      {% else %}
+        <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize | remove: '.html'  }}</a>
+      {% endif %}
     {% endcase %}
   {% endfor %}
 </div>

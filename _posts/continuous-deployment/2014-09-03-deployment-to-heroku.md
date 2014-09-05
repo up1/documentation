@@ -5,7 +5,7 @@ tags:
   - deployment
   - heroku
 categories:
-  - continuous deployment
+  - continuous-deployment
 ---
 ## [Settings](#settings){:name="settings"}
 Within Codeship you are able to configure <%= docs_link_to "Deployment Pipelines", "/continuous-deployment/deployment-pipelines/" %>. You can easily add a Heroku Deployment choosing Heroku as deployment method.

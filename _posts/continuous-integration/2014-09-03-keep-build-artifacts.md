@@ -4,7 +4,7 @@ tags:
   - faq
   - artifacts
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 You can push artifacts generated during your build to S3 or any other storage provider.
 

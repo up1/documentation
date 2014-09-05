@@ -1,6 +1,21 @@
 ---
 layout: default
 ---
+{% if page.title %}
+  {% assign title = page.title %}
+{% elsif page.category %}
+  {% if site.data.categories[page.category].title %}
+    {% assign title = site.data.categories[page.category].title %}
+  {% else %}
+    {% assign title = page.category | capitalize %}
+  {% endif %}
+{% elsif page.tag %}
+  {% if site.data.tags[page.tag].title %}
+    {% assign title = site.data.tags[page.tag].title %}
+  {% else %}
+    {% capture title %}#{{ page.tag }} {% endcapture %}
+  {% endif %}
+{% endif %}
 
 {% include search.html %}
 
@@ -11,7 +26,7 @@ layout: default
 
       {% include breadcrumbs.html %}
 
-      <h2 class="pageTitle">{{ page.title | capitalize }}</h2>
+      <h1 class="pageTitle">{{ title }}</h1>
       {% if page.tags %}
       <div class="hidden-on-md hidden-on-lg onPageTags">
         {% for tag in page.tags %}<a class="tag" href="{{ site.baseurl }}/tags/{{ tag | downcase }}/">#{{ tag | downcase }}</a>{% endfor %}

@@ -14,6 +14,7 @@ $ ->
       @_watchInputs $('[data-watch="textarea"]'), 'textarea' if $('[data-watch="textarea"]').length > 0
       @_calculateFooterHeight()
       @_setTitleImage()
+      @_linkfyAnchors()
       @_handleMobileMenu()
 
     _calculateFooterHeight: ->
@@ -54,5 +55,20 @@ $ ->
         else
           $menu.addClass('is-visible').velocity "slideDown", {duration: 200}
 
+    _linkfyAnchors: ->
+      console.log "here"
+
+      anchorForId = (id)->
+        anchor = document.createElement('a')
+        anchor.className = "headerLink"
+        anchor.href = "##{id}"
+        anchor.innerHTML = "<i class=\"fa fa-link\"></i>";
+        return anchor;
+
+      $headers = $('.pageContent').find('h2')
+      $headers.each ->
+        if $(this).attr('id') != ''
+          $(this).append anchorForId($(this).attr('id'))
+          console.log "appended"
 
   new Ui.Watcher

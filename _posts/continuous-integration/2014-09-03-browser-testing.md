@@ -4,7 +4,7 @@ tags:
   - testing
   - continuous integration
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 ## [Firefox](#firefox){:name="firefox"}
 Firefox 28 is installed and available in the PATH.

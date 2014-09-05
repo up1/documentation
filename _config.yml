@@ -7,7 +7,7 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: "posts"
+      type: posts
     values:
       layout: page
       weight: 50
@@ -18,6 +18,8 @@ exclude:
   - Guardfile
   - Gemfile
   - Gemfile.lock
+gems:
+  - octopress-autoprefixer
 collections:
   faq:
     permalink: /faq/:title/
@@ -33,8 +35,8 @@ markdown: kramdown
 
 # Kramdown
 kramdown:
+  input: GFM
   use_coderay: true
-
   coderay:
     coderay_line_numbers:      table
     coderay_css:               class

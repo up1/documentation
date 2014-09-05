@@ -3,7 +3,7 @@ title: Setting Environment Variables
 tags:
   - testing
 categories:
-  - continuous integration
+  - continuous-integration
 ---
 If you set environment variables, they will be available for the whole build. You can set your environment variables in two different ways:
 
