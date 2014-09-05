@@ -3,27 +3,32 @@ layout: default
 title: Documentation
 bodyclass: is-blue
 ---
+{% assign categories = site.data.categories | sort_data: 'weight', 'last' %}
 
 {% include search.html %}
 
 <div class="contentWrapper">
   <div class="grid grid--boxContainer">
-    {% for category in site.categories %}
-    {% assign category_pages = site.categories[category.first] | sort: 'weight' %}
-    <div class="colxs100 colsm50 colmd33 collg33">
-      <div class="box">
-        <h2 class="box__title">{{ category.first | capitalize }}</h2>
-          <ul class="box__links ul">
-            {% for content_page in category_pages reversed limit: 4 %}
-            <li><a href="{{ site.baseurl }}{{ content_page.url }}" class="box__link">{{ content_page.title }}</a></li>
-            {% endfor %}
-          </ul>
-        <div class="box__footer">
-          <a href="{{ site.baseurl }}/{{ category.first }}/">Read More</a>
-          <span class="box__counter">{{ site.categories[category.first] | size }} Topics</span>
+    {% for c in categories reversed %}
+      {% assign category = c.last %}
+      {% assign category_name = c.first %}
+      {% if site.categories[category_name] %}
+        {% assign category_pages = site.categories[category_name] | sort: 'weight' %}
+        <div class="colxs100 colsm50 colmd33 collg33">
+          <div class="box">
+            <h2 class="box__title">{{ category.title }}</h2>
+              <ul class="box__links ul">
+                {% for content_page in category_pages reversed limit: 4 %}
+                <li><a href="{{ site.baseurl }}{{ content_page.url }}" class="box__link">{{ content_page.title }}</a></li>
+                {% endfor %}
+              </ul>
+            <div class="box__footer">
+              <a href="{{ site.baseurl }}/{{ category_name }}/">Read More</a>
+              <span class="box__counter">{{ site.categories[category_name] | size }} Topics</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      {% endif %}
     {% endfor %}
 
     <div class="row">
