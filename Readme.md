@@ -31,3 +31,14 @@ bundle update
 git add Gemfile Gemfile.lock
 git commit
 ```
+
+## Markup
+
+### Table of contents
+
+If you want to include a table of contents, include the following snippet in the markdown file
+
+```md
+* include a table of contents
+{:toc}
+```
