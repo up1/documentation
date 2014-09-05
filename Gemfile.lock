@@ -100,5 +100,5 @@ PLATFORMS
 DEPENDENCIES
   guard-jekyll-plus!
   jekyll (~> 2.3.0)
-  octopress-autoprefixer
+  octopress-autoprefixer (~> 1.0.0)
   rack
