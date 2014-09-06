@@ -1,5 +1,4 @@
 module Jekyll
-
   class TagPage < Page
     def initialize(site, base, dir, tag)
       @site = site
@@ -26,4 +25,27 @@ module Jekyll
     end
   end
 
+  class TagUrl < Liquid::Tag
+    def initialize(tag_name, text, tokens)
+      super
+      @tag = text.strip
+    end
+
+    def render(context)
+      site = context.registers[:site]
+      tags_dir = site.config['tags_dir'] || 'tags'
+      [ site.baseurl, tags_dir, @tag.downcase.gsub(' ', '-'), '' ].join('/')
+    end
+  end
+
+  module TagFilters
+    def tag_url(input)
+      site = @context.registers[:site]
+      tags_dir = site.config['tags_dir'] || 'tags'
+      [ site.baseurl, tags_dir, input.downcase.gsub(' ', '-'), '' ].join('/')
+    end
+  end
 end
+
+Liquid::Template.register_filter(Jekyll::TagFilters)
+Liquid::Template.register_tag('tag_url', Jekyll::TagUrl)

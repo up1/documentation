@@ -6,7 +6,7 @@
   {% if include.tags %}
   <div class="meta__right">
     <ul class="tagList">
-      {% for tag in include.tags %}<li><a class="tag" href="{{ site.baseurl }}/tags/{{ tag | downcase }}/">#{{ tag | downcase }}</a></li>{% endfor %}
+      {% for tag in include.tags %}<li><a class="tag" href="{{tag | tag_url }}">#{{ tag | downcase }}</a></li>{% endfor %}
     </ul>
   </div>
   {% endif %}
