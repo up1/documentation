@@ -42,3 +42,33 @@ If you want to include a table of contents, include the following snippet in the
 * include a table of contents
 {:toc}
 ```
+
+### URL Helpers
+#### Tags
+
+Generate a URL for the specified tag (_database_ in the example below). This is also available as a filter to be used with a variable (_tag_ in the example).
+
+```
+{% tag_url databases %}
+{{ tag | tag_url }}
+```
+
+generate the output like the following (depending on configuration values)
+
+```
+/tags/databases/
+```
+
+#### Man Pages
+
+Link to a specific Ubuntu man page. This currently defaults to the Ubuntu Trusty version.
+
+```
+{% man_url formatdb %}
+```
+
+generates the following output
+
+```
+http://manpages.ubuntu.com/manpages/trusty/en/man1/formatdb.1.html
+```
