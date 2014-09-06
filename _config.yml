@@ -1,6 +1,7 @@
 # Site settings
 baseurl: /documentation
 permalink: /:categories/:title/
+ubuntu_version: trusty
 
 # Defaults for posts
 defaults:
