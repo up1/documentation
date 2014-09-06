@@ -1,0 +1,12 @@
+---
+title: Tags
+layout: page
+---
+
+<p>Following you'll find a list of all tags used throughout the documentation.</p>
+
+<ul class="ul ul--columnized">
+  {% for tag in site.tags | sort %}
+    <li><a href="{{ site.baseurl }}/{{ site.tags_dir }}/{{ tag.first | replace: ' ', '-' }}/">#{{ tag.first }}</a></li>
+  {% endfor %}
+</ul>

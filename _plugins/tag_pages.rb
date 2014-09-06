@@ -20,7 +20,7 @@ module Jekyll
       if site.layouts.key? 'tags'
         dir = site.config['tags_dir'] || 'tags'
         site.tags.keys.each do |tag|
-          site.pages << TagPage.new(site, site.source, File.join(dir, tag), tag)
+          site.pages << TagPage.new(site, site.source, File.join(dir, tag.downcase.gsub(' ', '-')), tag)
         end
       end
     end
