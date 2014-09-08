@@ -1,5 +1,5 @@
 module Jekyll
-  module CustomFilters
+  module DataFilters
     # Sort a object from _data by a property
     #
     # input - the object, something from site.data
@@ -51,4 +51,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::CustomFilters)
+Liquid::Template.register_filter(Jekyll::DataFilters)

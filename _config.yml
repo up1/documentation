@@ -3,6 +3,7 @@ url: https://www.codeship.io/documentation
 baseurl: /documentation
 permalink: /:categories/:title/
 tags_dir: tags
+ubuntu_version: trusty
 
 # Defaults for posts
 defaults:

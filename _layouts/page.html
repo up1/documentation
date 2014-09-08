@@ -29,7 +29,7 @@ layout: default
       <h1 class="pageTitle">{{ title }}</h1>
       {% if page.tags %}
       <div class="hidden-on-md hidden-on-lg onPageTags">
-        {% for tag in page.tags %}<a class="tag" href="{{ site.baseurl }}/{{ site.tags_dir }}/{{ tag | downcase | replace: ' ', '-' }}/">#{{ tag | downcase }}</a>{% endfor %}
+        {% for tag in page.tags %}<a class="tag" href="{{tag | tag_url }}">#{{ tag | downcase }}</a>{% endfor %}
       </div>
       {% endif %}
 
