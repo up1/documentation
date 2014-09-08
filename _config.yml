@@ -1,5 +1,5 @@
 # Site settings
-url: https://codeship.io/documentation
+url: https://www.codeship.io/documentation
 baseurl: /documentation
 permalink: /:categories/:title/
 
