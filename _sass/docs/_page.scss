@@ -232,6 +232,10 @@ body.is-blue {
     }
   }
 
+  img,table {
+    margin: 0.7rem 0;
+  }
+
   ul {
     @extend .ul;
   }
