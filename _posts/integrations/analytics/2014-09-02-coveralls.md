@@ -7,11 +7,11 @@ tags:
 categories:
   - analytics
 ---
-## [Coveralls Discount Code](#discount){:name="discount"}
+## Coveralls Discount Code
 
 Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 months. Use the code **"coverallslovescodeship"** and [get started right away](https://coveralls.io/).
 
-## [Setup for Ruby Project](#ruby){:name="ruby"}
+## Setup for Ruby Project
 
 Starting with Coveralls and Codeship is easy. Their docs do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
 
@@ -64,6 +64,6 @@ bundle exec rake coveralls:push
 ~~~
 
 
-## [Setup for other languages](#other){:name="other"}
+## Setup for other languages
 
 Coveralls supports a lot of other languages. Check out their fantastic [documentation](https://coveralls.io/docs/supported_continuous_integration).
