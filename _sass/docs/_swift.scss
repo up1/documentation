@@ -15,7 +15,13 @@
 
 #st-main-container {
   max-width: 800px;
+  left: 50%;
   margin-left: -400px;
+
+  @media(max-width: 800px){
+    left: 0;
+    margin-left: 0;
+  }
 
   a.close {
     background: none;
