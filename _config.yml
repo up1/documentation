@@ -25,7 +25,7 @@ gems:
   - octopress-autoprefixer
 collections:
   faq:
-    permalink: /faq/:title/
+    permalink: /faq/:path/
     output: true
 
 # SASS
