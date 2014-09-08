@@ -13,15 +13,10 @@ We generally advise to use any SSH based tools like SFTP or SCP for deployment a
 
 When we checkout your repository we clone it to a folder called ```clone``` directly beneath the home directory. So when you see references to ```~/clone/``` folder, we talk about our local copy of your repository.
 
+* include a table of contents
+{:toc}
 
-+ [Continuous Deployment with FTP](#ftp)
-+ [Authenticating via SSH public keys](#authenticate)
-+ [Continuous Deployment with SFTP](#sftp)
-+ [Continuous Deployment with SCP](#scp)
-+ [Continuous Deployment with RSYNC](#rsync)
-+ [Run scripts with SSH](#run-scripts)
-
-## [Continuous Deployment with FTP](#ftp){:name="ftp"}
+## Continuous Deployment with FTP
 
 For ftp we have recommend using _lftp_ for uploading your files. The following section will help you get started.
 
@@ -41,13 +36,13 @@ So if you wanted to copy all of your repository to a remote server, you could ad
 lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /remote/dir"
 ~~~
 
-For more information on using _lftp_ please see the <%= man_link_to "LFTP man page", "lftp" %> available online.
+For more information on using _lftp_ please see the [LFTP man page]({% man_url lftp %}) available online.
 
-## [Authenticating via SSH public keys](#authenticate){:name="authenticate"}
+## Authenticating via SSH public keys
 
 All of the methods below can use key based authentication. As this does not require you to provide your account password to Codeship, we strongly advise to configure this.
 
-You need to add the <%= docs_link_to "Codeship public SSH Key", "/continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/" %> to your authorized_keys file on the server. This file is located in a folder called ```.ssh``` beneath your home directory. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
+You need to add the [Codeship public SSH key]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) to your authorized_keys file on the server. This file is located in a folder called ```.ssh``` beneath your home directory. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
 
 ~~~shell
 mkdir -p ~/.ssh
@@ -58,9 +53,9 @@ chmod -R go-rwx ~/.ssh/
 editor ~/.ssh/authorized_keys
 ~~~
 
-## [Continuous Deployment with SFTP](#sftp){:name="sftp"}
+## Continuous Deployment with SFTP
 
-SFTP supports FTP like commands over an encrypted SSH session. You can automate SFTP by creating a batchfile and handing it to SFTP. The batchfile can contain any commands documented in the interactive commands section of the <%= man_link_to "SFTP man page", "sftp" %>.
+SFTP supports FTP like commands over an encrypted SSH session. You can automate SFTP by creating a batchfile and handing it to SFTP. The batchfile can contain any commands documented in the interactive commands section of the [LFTP man page]({% man_url sftp %}).
 
 As with the the FTP example above, we will deploy the complete repository contents onto a remote server.
 
@@ -71,36 +66,36 @@ mkdir /path/on/server
 put -rp ~/clone/* /path/on/server/
 ~~~
 
-For the <%= docs_link_to "branch you want to deploy", "/continuous-deployment/deployment-pipelines/" %> you create a script deployment that contains:
+For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
 ~~~shell
 sftp -b deploy/production ssh_user@your.server.com
 ~~~
 
-Make sure you add the <%= docs_link_to "SSH Key of your project", "/continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/" %>
-into [your servers ***authorized_keys file***](#authenticate).
+Make sure you add the [SSH key of your project]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
+into your servers ***authorized_keys*** file.
 
-## [Continuous Deployment with SCP](#scp){:name="scp"}
+## Continuous Deployment with SCP
 
 SCP allows you to copy files from your local system to another server. With the ***-r*** option
 you can also recursively upload directories. You can read more about the different options
-in the <%= man_link_to "SCP man page", "scp" %>.
+in the [LFTP man page]({% man_url scp %}).
 
-For the <%= docs_link_to "branch you want to deploy", "/continuous-deployment/deployment-pipelines/" %> you create a script deployment that contains:
+For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
 ~~~shell
 scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
 ~~~
 
-Make sure you add the <%= docs_link_to "SSH Key of your project", "/continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/" %>
-into your servers ***authorized_keys file***.
+Make sure you add the [SSH key of your project]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
+into your servers ***authorized_keys*** file.
 
-## [Continuous Deployment with RSYNC](#rsync){:name="rsync"}
+## Continuous Deployment with RSYNC
 
 Rsync is an amazing tool to sync your local filesystem with an external server. Rsync
 will check the files and only upload files that have changed.
 
-For the <%= docs_link_to "branch you want to deploy", "/continuous-deployment/deployment-pipelines/" %> you create a script deployment that contains the following code.
+For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains the following code.
 
 ~~~shell
 rsync -av ~/clone/ ssh_user@your.server.com:/path/on/server/
@@ -112,11 +107,11 @@ Or you can also run rsync over ssh.
 rsync -avz -e "ssh" ~/clone/ ssh_user@your.server.com:/path/on/server/
 ~~~
 
-You can read more about the Rsync options in the <%= man_link_to "Rsync man page", "rsync" %>.
+You can read more about the Rsync options in the [LFTP man page]({% man_url rsync %}).
 
-## [Start services for deployment through SSH](#run-scripts){:name="run-scripts"}
+## Start services for deployment through SSH
 
-If you give a command as the last parameter to SSH it will run this command on the server and exit with the return status of that command. This can be used to start services or trigger a deployment on an external system. If, for example, you already copied a script named ```restart_apache.sh`` to your server in a previous step, you would be able to call it with the following snippet.
+If you give a command as the last parameter to SSH it will run this command on the server and exit with the return status of that command. This can be used to start services or trigger a deployment on an external system. If, for example, you already copied a script named ```restart_apache.sh``` to your server in a previous step, you would be able to call it with the following snippet.
 
 ~~~shell
 ssh ssh_user@your.server.com "restart_apache.sh"

@@ -7,11 +7,11 @@ tags:
 categories:
   - continuous-deployment
 ---
-## [Prerequisites](#prerequisites){:name="prerequisites"}
+## Prerequisites
 
 This deployment method is not yet able to create Elastic Beanstalk environments, neither does it configure the S3 Bucket needed to upload new versions of your application. Please configure your Elastic Beanstalk environment by hand for your first deploy. All later deployments can than be handled by the scripts provided in this article.
 
-## [Configuration](#configuration){:name="configuration"}
+## Configuration
 
 Please add the following variables to the ***Environment*** page in your project configuration.
 
@@ -24,7 +24,7 @@ ENV_NAME="YOUR_BEANSTALK_ENVIRONMENT_NAME"
 S3_BUCKET="YOUR_S3_BUCKET_FOR_APPLICATION_DEPLOYMENT"
 ~~~
 
-## [Deploy Script](#deploy-script){:name="deploy-script"}
+## Deploy Script
 
 Here is a script (```deploy_beanstalk.sh```) that you can put into your repository. Feel free to adapt and modify it to your specific needs.
 
@@ -57,9 +57,9 @@ aws elasticbeanstalk update-environment --environment-name "${ENV_NAME}" --versi
 
 Once you added the above script to your repository, you can activate it on the ***Deployment*** page, via the *Custom script* option.
 
-![Beanstalk Deployment Script](deployment/script_beanstalk.png)
+![Beanstalk Deployment Script]({{ site.baseurl }}/images/continuous-deployment/script_beanstalk.png)
 
-## [See also](#see-also){:name="see-also"}
+## See also
 
 + [Latest ```awscli``` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
 + [Latest Elastic Beanstalk documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
