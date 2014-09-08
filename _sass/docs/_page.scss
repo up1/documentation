@@ -261,6 +261,8 @@ body.is-blue {
     display: inline-block;
     width: 50%;
     box-sizing: border-box;
+    padding-right: 10px;
+    vertical-align: top;
 
     @media (max-width: $bpSmall) {
       width: 100%;
