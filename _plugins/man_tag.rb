@@ -10,12 +10,6 @@ module Jekyll
       ubuntu_version = context.registers[:site].config['ubuntu_version']
       "http://manpages.ubuntu.com/manpages/#{ubuntu_version}/en/man#{@section}/#{@man_page.downcase}.#{@section}.html"
     end
-
-    private
-
-    def split_params(params)
-
-    end
   end
 end
 
