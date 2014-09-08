@@ -12,7 +12,7 @@ You can add ```--skip-ci``` or  ```[skip ci]``` to the commit message of the las
 
 When you merge a pull request you can add the ```--skip-ci``` to the commit message as well.
 
-## [Can we limit the branches that are built?](#limit-branches){:name="limit-branches"}
+## Can we limit the branches that are built?
 
 We build all branches you push to your repository. In our opinion every push to your repository should be tested.
 
