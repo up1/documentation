@@ -16,6 +16,7 @@ $ ->
       @_setTitleImage()
       @_linkfyAnchors()
       @_handleMobileMenu()
+      @setScrollToEvents()
 
     _calculateFooterHeight: ->
       targetHeight = $('.widgetArea').outerHeight()
@@ -56,7 +57,6 @@ $ ->
           $menu.addClass('is-visible').velocity "slideDown", {duration: 200}
 
     _linkfyAnchors: ->
-      console.log "here"
 
       anchorForId = (id)->
         anchor = document.createElement('a')
@@ -69,6 +69,13 @@ $ ->
       $headers.each ->
         if $(this).attr('id') != ''
           $(this).append anchorForId($(this).attr('id'))
-          console.log "appended"
+
+    setScrollToEvents: ->
+
+      $('a','#markdown-toc').on 'click', (e) ->
+        e.preventDefault()
+        target = $(this).attr 'href'
+        $(target).velocity 'scroll', {duration: 500, offset: -90, easing: "easeInSine"}
+
 
   new Ui.Watcher
