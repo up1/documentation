@@ -1,4 +1,5 @@
 # Site settings
+url: https://www.codeship.io/documentation
 baseurl: /documentation
 permalink: /:categories/:title/
 tags_dir: tags
