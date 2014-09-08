@@ -52,7 +52,7 @@ echo $CI_MESSAGE
 ~~~
 
 | Name                        | Value                                              |
-| ----------------------------|:--------------------------------------------------:|
+| ----------------------------|:---------------------------------------------------|
 | CI                          |  true                                              |
 | CI_BUILD_NUMBER             |  ID of the build in our service                    |
 | CI_BUILD_URL                |  URL of the build                                  |

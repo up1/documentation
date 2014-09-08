@@ -7,15 +7,15 @@ tags:
 categories:
   - continuous-deployment
 ---
-## [Different Ways to deploy](#different-ways){:name="different-ways"}
+## Different Ways to Deploy
 DigitalOcean offers virtual servers (called Droplets).
 There are various ways to deploy your application to DigitalOcean.
 
-## [Capistrano](#capistrano){:name="capistrano"}
+## Capistrano
 If you have a Ruby on Rails Application the most common way to deploy to DigitalOcean is Capistrano.
-Checkout our article on <%= docs_link_to "Capistrano Deployment", "/continuous-deployment/deployment-with-capistrano/" %> for that.
+Checkout our article on [Capistrano Deployment]({% post_url continuous-deployment/2014-09-03-deployment-with-capistrano %}) for that.
 
-## [SCP](#scp){:name="scp"}
+## SCP
 A DigitalOcean droplet is very similar to a virtual server.
 One way to deploy your application to DigitalOcean is to copy them via SCP to your Droplet.
-Checkout our article on <%= docs_link_to "SCP Deployment", "/continuous-deployment/deployment-with-ftp-sftp-scp/" %> for that.
+Checkout our article on [SCP Deployment]({% post_url continuous-deployment/2014-09-03-deployment-with-ftp-sftp-scp %}) for that.

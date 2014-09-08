@@ -24,4 +24,4 @@ bundle exec rake my_rake_task
 ~~~
 
 To get more concrete you can, for example, run a migration on Heroku after your deployment:
-![Migration after Heroku Deployment](deployment/script_deployment.png)
+![Migration after Heroku Deployment]({{ site.baseurl }}/images/continuous-deployment/script_deployment.png)

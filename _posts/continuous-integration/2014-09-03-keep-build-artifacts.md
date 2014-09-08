@@ -27,11 +27,11 @@ AWS_ACCESS_KEY_ID=<access_key_id>
 AWS_SECRET_ACCESS_KEY=<secret_access_key>
 ~~~
 
-Check out the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html){:target="_blank"}. for more information.
+Check out the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html). for more information.
 
 We don't keep your artifacts on the Codeship: After your build is finished we delete all data for security reasons.
 
-As an example learn [how we deploy our documentation to S3](http://blog.codeship.io/2014/02/04/continuous-deployment-static-pages-amazon-s3.html){:target="_blank"}.
+As an example learn [how we deploy our documentation to S3](http://blog.codeship.io/2014/02/04/continuous-deployment-static-pages-amazon-s3.html).
 
 ## Upload through SFTP
 
