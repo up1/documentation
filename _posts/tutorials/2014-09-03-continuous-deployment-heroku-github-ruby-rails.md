@@ -1,5 +1,6 @@
 ---
 title: Rails ➙ Heroku
+weight: 75
 tags:
   - continuous integration
   - deployment
