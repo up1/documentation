@@ -1,5 +1,5 @@
 ---
-title: NodeJS ➙ Modulus
+title: Deploy NodeJS to Modulus
 tags:
   - continuous integration
   - deployment

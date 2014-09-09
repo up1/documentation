@@ -1,5 +1,5 @@
 ---
-title: Django ➙ Google App Engine
+title: Deploy Django to Google App Engine
 tags:
   - continuous integration
   - deployment
