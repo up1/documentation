@@ -30,6 +30,20 @@ bodyclass: is-blue
         </div>
       {% endif %}
     {% endfor %}
+    <div class="colxs100 colsm50 colmd33 collg33">
+      <div class="box">
+        <h2 class="box__title">FAQ</h2>
+          <ul class="box__links ul">
+            {% for q in site.faq | sort | limit: 4 %}
+            <li><a href="{{ site.baseurl }}{{ q.url }}" class="box__link">{{ q.title }}</a></li>
+            {% endfor %}
+          </ul>
+        <div class="box__footer">
+          <a href="{{ site.baseurl }}/faq/">Read More</a>
+          <span class="box__counter">{{ site.faq | size }} Topics</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="grid">
     <div class="row">
