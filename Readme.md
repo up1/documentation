@@ -2,7 +2,9 @@
 
 [ ![Codeship Status for codeship/documentation](https://codeship.io/projects/59a737f0-1648-0132-c4e7-72c6c37b1f6e/status)](https://codeship.io/projects/33837)
 
-## Setup
+## Getting Started
+
+### Setup
 
 Clone the repository, install needed gems and run Jekyll ;)
 
@@ -13,11 +15,11 @@ bundle install
 bundle exec guard
 ```
 
-You can then access the site at [http://localhost:4000]
+You can then access the site at [http://localhost:4000](http://localhost:4000)
 
-## Contributing
+### Contributing
 
-1. Fork it ([https://github.com/codeship/documentation/fork])
+1. [Fork it](https://github.com/codeship/documentation/fork)
 1. Create your feature branch (```git checkout -b my-new-feature```)
 1. Commit your changes (```git commit -am 'Add some feature'```)
 1. Push to the branch (```git push origin my-new-feature```)
