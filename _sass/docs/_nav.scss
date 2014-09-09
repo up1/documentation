@@ -6,6 +6,7 @@
 
 .nav {
   display: inline-block;
+  font-size: 0;
 
   ul {
     list-style: none;
@@ -21,6 +22,7 @@
 
 .nav--small {
   font-size: .7em;
+  font-size: 0;
 }
 
 .nav__link {
