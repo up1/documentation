@@ -118,6 +118,8 @@ body.is-blue {
 
 .breadcrumbs {
   transform: translateY(-.5rem);
+  overflow-wrap: normal;
+  overflow-x: initial;
 
   a {
     color: darken($_cGrey,10%);
