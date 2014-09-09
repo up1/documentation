@@ -1,5 +1,5 @@
 ---
-title: Rails ➙ Heroku
+title: Deploy Rails to Heroku
 weight: 75
 tags:
   - continuous integration

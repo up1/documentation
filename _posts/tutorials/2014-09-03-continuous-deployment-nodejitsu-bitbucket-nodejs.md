@@ -1,5 +1,5 @@
 ---
-title: NodeJS ➙ nodejitsu
+title: Deploy NodeJS to nodejitsu
 tags:
   - continuous integration
   - deployment
