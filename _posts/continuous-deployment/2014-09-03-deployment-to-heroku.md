@@ -27,7 +27,7 @@ You can specify to run the migration during the Heroku deployment within the ***
 heroku_run bundle exec rake db:migrate my_herokuapp_name
 ~~~
 
-![Migration after Heroku Deployment]({{ site.baseurl }}/images/continuous-deployment//script_deployment.png)
+![Migration after Heroku Deployment]({{ site.baseurl }}/images/continuous-deployment/script_deployment.png)
 
 ## Troubleshooting
 - [check_url fails when deploying to Heroku](/faq/check_url-fails-for-heroku-deployment/)
