@@ -72,7 +72,7 @@ $ ->
 
     setScrollToEvents: ->
 
-      $('a','#markdown-toc').on 'click', (e) ->
+      $('a','#markdown-toc, h2').on 'click', (e) ->
         e.preventDefault()
         target = $(this).attr 'href'
         $(target).velocity 'scroll', {duration: 500, offset: -90, easing: "easeInSine"}

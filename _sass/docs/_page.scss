@@ -228,6 +228,10 @@ body.is-blue {
       @extend .like-h4;
       padding: 0 .5rem;
       line-height: 1;
+      position: absolute;
+      left: 0;
+      font-size: .9em;
+      transform: translate(-60%,0.2em);
     }
 
     &:hover a {
@@ -247,7 +251,7 @@ body.is-blue {
     @extend .ol;
   }
 
-  > div {
+  [data-swiftype-name="body"] > div {
     overflow-x: scroll;
   }
 

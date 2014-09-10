@@ -7,6 +7,10 @@
   margin-top: 4rem;
   z-index: 1;
 
+  .contenWrapper {
+    max-width: 68rem;
+  }
+
   .nav {
     a { color: $cFooter;
       font-size: .7em;}
@@ -32,4 +36,11 @@
   img {
     position: absolute;
   }
+}
+
+.specialSiteLinks a {
+  font-size: .8rem;
+  padding: $base-padding/3 $base-padding/2;
+  text-decoration: underline;
+  margin: 0;
 }
