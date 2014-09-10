@@ -246,7 +246,7 @@ body.is-blue {
     @extend .ol;
   }
 
-  > div {
+  [data-swiftype-name="body"] > div {
     overflow-x: scroll;
   }
 
