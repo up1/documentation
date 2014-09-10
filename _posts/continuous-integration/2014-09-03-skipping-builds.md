@@ -1,5 +1,6 @@
 ---
 title: Skipping builds
+weight: 70
 tags:
   - testing
   - faq
