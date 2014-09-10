@@ -58,9 +58,7 @@ To install a new version of NodeJS use
 nvm install 0.11
 ~~~
 
-or
-
-Use a different version of NodeJS
+or use a different version of NodeJS
 
 ~~~shell
 nvm use 0.10.25

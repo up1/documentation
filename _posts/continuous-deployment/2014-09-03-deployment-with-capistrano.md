@@ -19,7 +19,7 @@ You just need to specify the task we should run for you. Most of the times this 
 
 Checkout our [Deployment Pipelines]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) if you want to add multiple Capistrano Deployments.
 
-![Capistrano]({{ site.baseurl }}/images/continuous-deployment//capistrano_deployment_setup.png)
+![Capistrano]({{ site.baseurl }}/images/continuous-deployment/capistrano_deployment_setup.png)
 
 ## Capistrano with ScriptDeployment
 
