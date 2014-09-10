@@ -1,5 +1,6 @@
 ---
-title: Continuous Deployment to Elastic Beanstalk
+title: Deploy to Elastic Beanstalk
+weight: 80
 layout: page
 tags:
   - deployment

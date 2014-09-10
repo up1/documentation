@@ -1,5 +1,5 @@
 ---
-title: Continuous Deployment via FTP, SFTP, SCP, RSYNC and SSH
+title: Deploy via FTP, SFTP, SCP, RSYNC and SSH
 layout: page
 tags:
   - deployment

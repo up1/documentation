@@ -1,5 +1,6 @@
 ---
-title: Continuous Deployment to Heroku
+title: Deploy to Heroku
+weight: 90
 layout: page
 tags:
   - deployment

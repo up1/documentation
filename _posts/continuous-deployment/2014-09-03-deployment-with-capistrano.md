@@ -1,5 +1,5 @@
 ---
-title: Continuous Deployment via Capistrano
+title: Deploy via Capistrano
 layout: page
 tags:
   - deployment

@@ -1,5 +1,5 @@
 ---
-title: Continuous Deployment to DigitalOcean
+title: Deploy to DigitalOcean
 layout: page
 tags:
   - deployment
