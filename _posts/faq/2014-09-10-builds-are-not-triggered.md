@@ -6,6 +6,8 @@ tags:
   - build error
   - github
   - bitbucket
+categories:
+  - faq
 ---
 In general a build is triggered on Codeship on each push to your remote repository. Hence there needs to be a hook set up at your repository provider (GitHub, Bitbucket).
 

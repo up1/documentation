@@ -5,6 +5,8 @@ tags:
   - faq
   - build error
   - heroku
+categories:
+  - faq
 ---
 In case your deployment to Heroku fails with an error message similar to this:
 

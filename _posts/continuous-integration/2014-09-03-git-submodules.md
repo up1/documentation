@@ -12,4 +12,4 @@ We initialize the submodules with the following git command
 
 `git submodule update --recursive --init`
 
-In case of troubles with permissions have a look at [how to give access to other repositories]({{ site.baseulr }}/faq/access-to-other-repositories-fails-during-build/).
+In case of troubles with permissions have a look at [how to give access to other repositories]({% post_url faq/2014-109-10-access-to-other-repositories-fails-during-build %}).

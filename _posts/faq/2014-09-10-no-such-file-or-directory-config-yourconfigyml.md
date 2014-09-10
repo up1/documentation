@@ -4,6 +4,8 @@ layout: page
 tags:
   - faq
   - build error
+categories:
+  - faq
 ---
 If it's a configuration file which you ignored in your repository, create a ```your_config.yml.example``` with data that works for your tests an add it to your repository. Then add
 

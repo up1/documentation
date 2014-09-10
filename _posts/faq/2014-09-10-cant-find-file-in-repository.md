@@ -4,6 +4,8 @@ layout: page
 tags:
   - faq
   - build error
+categories:
+  - faq
 ---
 When you get an error indicating that a file can't be found but you are sure
 it exists in the repository it might be due to case sensitivity of
