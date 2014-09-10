@@ -135,6 +135,7 @@
   display: table;
   table-layout: fixed;
   padding: 0;
+  margin-left: 0;
 
   > [class*="col"] {
       vertical-align: middle;
