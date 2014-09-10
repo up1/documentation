@@ -5,6 +5,8 @@ tags:
   - faq
   - build error
   - ruby
+categories:
+  - faq
 ---
 Sometimes you might see errors like the following:
 

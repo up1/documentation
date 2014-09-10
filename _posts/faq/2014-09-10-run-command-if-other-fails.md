@@ -5,6 +5,8 @@ tags:
   - faq
   - build error
   - commands
+categories:
+  - faq
 ---
 To run another command if an earlier one fails you can use the following bash syntax
 

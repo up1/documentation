@@ -5,6 +5,8 @@ tags:
   - faq
   - commands
   - branch
+categories:
+  - faq
 ---
 ## Ignore command on a branch
 

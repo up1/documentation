@@ -5,6 +5,8 @@ tags:
   - faq
   - build error
   - heroku
+categories:
+  - faq
 ---
 After each deployment we check if your app is up. Therefore we call (```wget```) either the default ```*.herokuapps.com``` URL or the URL you specified here.
 

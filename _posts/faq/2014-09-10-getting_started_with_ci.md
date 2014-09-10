@@ -4,6 +4,8 @@ layout: page
 tags:
   - faq
   - getting started
+categories:
+  - faq
 ---
 * [Introduction to Continuous Integration by Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html)
 * [Why Continuous Deployment by Eric Ries](http://www.startuplessonslearned.com/2009/06/why-continuous-deployment.html)

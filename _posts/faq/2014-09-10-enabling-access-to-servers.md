@@ -6,6 +6,8 @@ tags:
   - firewall
   - security group
   - ip addresses
+categories:
+  - faq
 ---
 ## IP Addresses
 

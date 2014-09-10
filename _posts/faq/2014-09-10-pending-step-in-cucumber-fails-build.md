@@ -6,6 +6,8 @@ tags:
   - build error
   - ruby
   - cucumber
+categories:
+  - faq
 ---
 The cucumber option ```--strict``` fails the build if you have a pending or undefined step.
 
