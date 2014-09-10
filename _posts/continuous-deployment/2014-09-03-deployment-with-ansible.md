@@ -1,5 +1,5 @@
 ---
-title: Continuous Deployment via Ansible
+title: Deploy via Ansible
 layout: page
 published: false
 tags:

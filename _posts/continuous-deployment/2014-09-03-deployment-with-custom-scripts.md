@@ -1,5 +1,5 @@
 ---
-title: Continuous Deployment via custom scripts
+title: Deploy via Custom Scripts
 layout: page
 tags:
   - deployment

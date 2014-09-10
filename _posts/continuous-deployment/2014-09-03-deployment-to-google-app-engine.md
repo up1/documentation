@@ -1,5 +1,6 @@
 ---
-title: Continuous Deployment to Google App Engine
+title: Deploy to Google App Engine
+weight: 85
 layout: page
 tags:
   - deployment
