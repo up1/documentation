@@ -226,10 +226,11 @@ body.is-blue {
       display: none;
       color: $cAnchor;
       @extend .like-h4;
-      padding: 0 .5rem;
+      padding: 0;
+      padding-right: 2rem;
       line-height: 1;
       position: absolute;
-      left: 0;
+      left: 1rem;
       font-size: .9em;
       transform: translate(-60%,0.2em);
     }

@@ -19,7 +19,7 @@ $ ->
       @setScrollToEvents()
 
     _calculateFooterHeight: ->
-      targetHeight = $('.widgetArea').outerHeight()
+      targetHeight = $(window).height() - $('.pageContent').offset().top - $('header').height() - $('footer').height() + 10
       $('.pageContent').css('min-height',targetHeight + "px")
 
     _setTitleImage: ->
