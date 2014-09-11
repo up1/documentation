@@ -42,7 +42,7 @@ For more information on using _lftp_ please see the [LFTP man page]({% man_url l
 
 All of the methods below can use key based authentication. As this does not require you to provide your account password to Codeship, we strongly advise to configure this.
 
-You need to add the [Codeship public SSH key]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) to your authorized_keys file on the server. This file is located in a folder called ```.ssh``` beneath your home directory. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
+You need to add the [Codeship public SSH key]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) to your authorized_keys file on the server. This file is located in a folder called ```.ssh``` beneath your home directory. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
 
 ~~~shell
 mkdir -p ~/.ssh
@@ -66,13 +66,13 @@ mkdir /path/on/server
 put -rp ~/clone/* /path/on/server/
 ~~~
 
-For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
+For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
 ~~~shell
 sftp -b deploy/production ssh_user@your.server.com
 ~~~
 
-Make sure you add the [SSH key of your project]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
+Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
 into your servers ***authorized_keys*** file.
 
 ## Continuous Deployment with SCP
@@ -81,13 +81,13 @@ SCP allows you to copy files from your local system to another server. With the 
 you can also recursively upload directories. You can read more about the different options
 in the [LFTP man page]({% man_url scp %}).
 
-For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
+For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
 ~~~shell
 scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
 ~~~
 
-Make sure you add the [SSH key of your project]({% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
+Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
 into your servers ***authorized_keys*** file.
 
 ## Continuous Deployment with RSYNC
@@ -95,7 +95,7 @@ into your servers ***authorized_keys*** file.
 Rsync is an amazing tool to sync your local filesystem with an external server. Rsync
 will check the files and only upload files that have changed.
 
-For the [branch you want to deploy]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains the following code.
+For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains the following code.
 
 ~~~shell
 rsync -av ~/clone/ ssh_user@your.server.com:/path/on/server/

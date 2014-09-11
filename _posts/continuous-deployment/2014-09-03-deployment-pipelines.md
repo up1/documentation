@@ -44,4 +44,4 @@ By clicking on "Edit Branch Settings" you can change the branch name or delete t
 
 ## Use Script Deployment for custom deployments / commands
 
-You can use the [Script Deployment]({% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) to run your custom deployment commands or to execute other tasks right after or before a deployment.
+You can use the [Script Deployment]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) to run your custom deployment commands or to execute other tasks right after or before a deployment.

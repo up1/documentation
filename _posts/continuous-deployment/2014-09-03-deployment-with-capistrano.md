@@ -17,7 +17,7 @@ Please include Capistrano in your project. We don't preinstall capistrano on our
 When your capistrano task is ready and working you just need to add the Capistrano Deployment on Codeship.
 You just need to specify the task we should run for you. Most of the times this is `deploy`.
 
-Checkout our [Deployment Pipelines]({% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) if you want to add multiple Capistrano Deployments.
+Checkout our [Deployment Pipelines]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) if you want to add multiple Capistrano Deployments.
 
 ![Capistrano]({{ site.baseurl }}/images/continuous-deployment/capistrano_deployment_setup.png)
 
