@@ -29,7 +29,7 @@ layout: default
       <h1 class="pageTitle" data-swiftype-name="title" data-swiftype-type="string"  data-swiftype-index='true'>{{ title }}</h1>
       {% if page.tags %}
       <div class="hidden-on-md hidden-on-lg onPageTags">
-        {% for tag in page.tags %}<a class="tag" href="{{tag | tag_url }}" data-swiftype-name="tags" data-swiftype-type="string"  data-swiftype-index='true'>#{{ tag | downcase }}</a>{% endfor %}
+        {% for tag in page.tags %}<a class="tag" href="{{tag | tag_url }}">#{{ tag | downcase }}</a>{% endfor %}
       </div>
       {% endif %}
 

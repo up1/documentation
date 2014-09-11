@@ -9,6 +9,11 @@
   <!-- start Swiftype -->
   <meta class="swiftype" name="url" data-type="enum" content="{{ site.url }}{{ page.url }}" />
   <meta class="swiftype" name="published_at" data-type="date" content="{{ site.time | date_to_xmlschema }}" />
+  {% if page.tags %}
+    {% for tag in page.tags %}
+    <meta class="swiftype" name="tags" data-type="string" content="{{ tag | downcase }}" />
+    {% endfor %}
+  {% endif %}
   <!-- end Swiftype -->
 
   <!-- start Mixpanel -->
