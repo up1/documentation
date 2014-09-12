@@ -43,7 +43,7 @@ bundle install
 
 There is no difference between setting ***RAILS_ENV*** like this and adding it on the ***Environment*** page of your project settings. The advantage of putting it into the environment configuration is that secret values will not show up in your build log.
 
-##Default Environment Variables
+## Default Environment Variables
 The following environment variables are exported automatically. You can use them to build your own scripts, run specific commands only if you are on a specific branch or even add flags to your ***CI_MESSAGE*** and use those flags to influence your build.
 
 You can get the value of an environment variable by adding "$" in front of the variable name. For example:
